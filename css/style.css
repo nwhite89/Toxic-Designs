@@ -1,0 +1,290 @@
+h1, h2, h3, h4, h5, h6 {
+	text-transform: capitalize;
+}
+html, button, input, select, textarea {
+	font-family: Arial, Helvetica, sans-serif;
+}
+#header-bar {
+	min-height: 50px;
+	background-color: #333;
+}
+.header h4 {
+	color: #111;
+	margin-left: 40px;
+}
+.header h4 span {
+	font-size: 32px;
+	vertical-align: middle;
+}
+.home .header h1,
+.home .header h4 span {
+	color: #31bf1f;
+}
+.labs .header h1,
+.labs .header h4 span {
+	color: #00aec8;
+}
+.development .header h1,
+.development .header h4 span {
+	color: #ee7e2a;
+}
+.blog .header h1,
+.blog .header h4 span {
+	color: #e64141;
+}
+.about-me .header h1,
+.about-me .header h4 span {
+	color: #81519c;
+}
+.header h1 {
+	color: #31bf1f;
+	margin-bottom: 0;
+	font-family: "Georgia", Arial;
+}
+.header h5 {
+	margin-top: 0;
+	color: #333;
+}
+.navbar-inner {
+	-webkit-border-top-right-radius: 0px;
+	-webkit-border-top-left-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-topleft: 0px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+}
+#tweet3d ul {
+	list-style: none;
+	padding: 0;
+	margin: 20px auto 0;
+	width: 32em;
+	height: 15em;
+}
+#tweet3d li {
+	height: 13em;
+	width: 20em;
+	background-color: #E8E8E8;
+	cursor: pointer;
+	-webkit-backface-visibility: hidden;
+	--webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 30px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 30px rgba(50, 50, 50, 0.75);
+}
+#tweet3d li.roundabout-in-focus {
+	cursor: default;
+}
+#tweet3d li p {
+	margin-left: 2em;
+	margin-right: 2em;
+}
+#tweet3d li p.hashtag {
+	margin-top: 2em;
+	padding-bottom: 1em;
+	border-bottom: 1px dotted #333;
+}
+#tweet3d li p.hashtag:before {
+	content: "Hashtag: ";
+	font-weight: bold;
+}
+#tweet3d li p.footer {
+	font-size: 12px;
+	color: #333;
+}
+#tweet3d li p.footer .user {
+	margin-left: 1em;
+}
+#tweet3d li p.footer .date {
+	margin-right: 1em;
+	float: right;
+}
+/* Navigation for Tablet and Desktop */
+@media only screen and (min-width: 768px) {
+	.socialicons {
+		display: inline-block;
+		position: absolute;
+		right: 0px;
+		top: 10px;
+	}
+	.socialicons .icon {
+		float: right;
+		display: block;
+		width: 34px;
+		height: 34px;
+		padding-right: 5px;
+		cursor: pointer;
+	}
+	.socialicons .icon.fb {
+		background: url(../img/icons/facebook.png) no-repeat;
+	}
+	.socialicons .icon.twi {
+		background: url(../img/icons/twitter.png) no-repeat;
+	}
+	.socialicons .icon.linki {
+		background: url(../img/icons/linkedin.png) no-repeat;
+	}
+	.socialicons .icon.github {
+		background: url(../img/icons/github.png) no-repeat;
+	}
+	.socialicons .icon > a {
+		display: block;
+		width:100%;
+		height:100%;
+	}
+	/* -- Navigation -- */
+	.navi {
+		border-bottom: 1px dotted #999;
+	}
+	.navi ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		float: right;
+	}
+	.navi ul li {
+		float: left;
+		text-transform: capitalize;
+	}
+	.navi ul li a {
+		color: #333;
+		display: block;
+		padding: 10px 15px;
+		text-decoration: none;
+		font-weight: bold;
+	}
+	.navi ul li a:hover,
+	.home .navi ul li a.home {
+		border-bottom: 5px solid #31bf1f;
+		padding-bottom: 5px;
+		cursor: pointer;
+	}
+	.navi ul li a.labs:hover,
+	.labs .navi ul li a.labs {
+		padding-bottom: 5px;
+		border-bottom: 5px solid #00aec8;
+	}
+	.navi ul li a.development:hover,
+	.development .navi ul li a.development {
+		padding-bottom: 5px;
+		border-bottom: 5px solid #ee7e2a;
+	}
+	.navi ul li a.blog:hover, 
+	.blog .navi ul li a.blog {
+		padding-bottom: 5px;
+		border-bottom: 5px solid #e64141;
+	}
+	.navi ul li a.about-me:hover, 
+	.about-me .navi ul li a.about-me {
+		padding-bottom: 5px;
+		border-bottom: 5px solid #81519c;
+	}
+	.navi-mobile, .navi-button {
+		display: none!important;
+	}
+	.navbar {
+		display: none;
+	}
+	#tweet3d ul {
+		width: 32em;
+	}
+}
+/* Navigation for Mobile */
+@media only screen and (max-width: 767px) {
+	.sixteen.columns.navi,
+	#header-bar {
+		display: none;
+	}
+	.navi-button {
+		color: red;
+		top: 3px;
+		right :10px;
+		position: absolute;
+		cursor: pointer;
+	}
+	.navi-mobile {
+		display: none;
+	}
+	.navi-mobile ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		background: #333;
+	}
+	.navi-mobile ul li {
+		text-transform: capitalize;
+	}
+	.navi-mobile ul li a {
+		color: #c9c9c9;
+		display: block;
+		padding: 10px 15px;
+		text-decoration: none;
+	}
+	.mobile-navi-button {
+		width: 30px;
+		height: 20px;
+		padding-top: 2px;
+		background: red;
+		float:right;
+	}
+	.mobile-navi-button .line {
+		width: 25px;
+		background: white;
+		height: 2px;
+		margin: auto;
+	}
+	.home .nav-collapse .nav > li > a.home, 
+	.nav-collapse .nav > li > a.home:hover, 
+	.labs .nav-collapse .nav > li > a.labs, 
+	.nav-collapse .nav > li > a.labs:hover, 
+	.development .nav-collapse .nav > li > a.development, 
+	.nav-collapse .nav > li > a.development:hover, 
+	.blog .nav-collapse .nav > li > a.blog, 
+	.nav-collapse .nav > li > a.blog:hover, 
+	.about-me .nav-collapse .nav > li > a.about-me, 
+	.nav-collapse .nav > li > a.about-me:hover { 
+		padding-left: 10px;
+		background-color: #111;
+		border-left: 5px solid transparent;
+	}
+	.home .nav-collapse .nav > li > a.home, 
+	.nav-collapse .nav > li > a.home:hover {
+		border-left: 5px solid #31bf1f;
+	}
+	.labs .nav-collapse .nav > li > a.labs,
+	.nav-collapse .nav > li > a.labs:hover {
+		border-left: 5px solid #00aec8;
+	}
+	.development .nav-collapse .nav > li > a.development,
+	.nav-collapse .nav > li > a.development:hover {
+		border-left: 5px solid #ee7e2a;
+	}
+	.blog .nav-collapse .nav > li > a.blog,
+	.nav-collapse .nav > li > a.blog:hover {
+		border-left: 5px solid #e64141;
+	}
+	.about-me .nav-collapse .nav > li > a.about-me,
+	.nav-collapse .nav > li > a.about-me:hover {
+		border-left: 5px solid #81519c;
+	}
+	.navbar .nav-collapse {
+		padding-top: 10px;
+	}
+	#tweet3d ul {
+		width: 20em;
+	}
+}
+@media only screen and (max-width: 479px) {
+	.header h4 {
+		margin-left: 20px;
+	}
+}
+.navbar-inverse .navbar-inner, #header-bar {
+	background-color: #333;
+	background-image: -moz-linear-gradient(top, #333, #111);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333), to(#111));
+	background-image: -webkit-linear-gradient(top, #333, #111);
+	background-image: -o-linear-gradient(top, #333, #111);
+	background-image: linear-gradient(to bottom, #333, #111);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff111111', GradientType=0);
+	border-color: #252525;
+}

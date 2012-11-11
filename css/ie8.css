@@ -1,0 +1,49 @@
+.navi {
+	border-bottom: 1px dotted #999;
+}
+.navi ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+.navi ul li {
+	float: left;
+	text-transform: capitalize;
+}
+.navi ul li a {
+	color: #333;
+	display: block;
+	padding: 10px 15px;
+	text-decoration: none;
+	font-weight: bold;
+}
+.navi ul li a:hover,
+.home .navi ul li a.home {
+	border-bottom: 5px solid #31bf1f;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+.navi ul li a.labs:hover,
+.labs .navi ul li a.labs {
+	padding-bottom: 5px;
+	border-bottom: 5px solid #00aec8;
+}
+.navi ul li a.development:hover,
+.development .navi ul li a.development {
+	padding-bottom: 5px;
+	border-bottom: 5px solid #ee7e2a;
+}
+.navi ul li a.blog:hover, 
+.blog .navi ul li a.blog {
+	padding-bottom: 5px;
+	border-bottom: 5px solid #e64141;
+}
+.navi ul li a.about-me:hover, 
+.about-me .navi ul li a.about-me {
+	padding-bottom: 5px;
+	border-bottom: 5px solid #81519c;
+}
+.navi-mobile, .navi-button {
+	display: none!important;
+}
