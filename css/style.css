@@ -61,6 +61,7 @@ html, button, input, select, textarea {
 	height: 15em;
 }
 #tweet3d li {
+	display: none;
 	height: 13em;
 	width: 20em;
 	background-color: #E8E8E8;
@@ -183,8 +184,8 @@ html, button, input, select, textarea {
 	.navbar {
 		display: none;
 	}
-	#tweet3d ul {
-		width: 32em;
+	#tweetmobi {
+		display: none;
 	}
 }
 /* Navigation for Mobile */
@@ -268,13 +269,13 @@ html, button, input, select, textarea {
 	.navbar .nav-collapse {
 		padding-top: 10px;
 	}
-	#tweet3d ul {
-		width: 20em;
+	#tweet3d {
+		display: none;
 	}
 }
 @media only screen and (max-width: 479px) {
 	.header h4 {
-		margin-left: 20px;
+		margin-left: 15px;
 	}
 }
 .navbar-inverse .navbar-inner, #header-bar {

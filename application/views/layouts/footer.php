@@ -7,7 +7,7 @@
         <script src="js/bootstrap.js"></script>
         <script src="js/jquery.roundabout.min.js"></script>
         <script src="js/easing.js"></script>
-        <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script> 
+        <!--script src="//platform.twitter.com/widgets.js" type="text/javascript"></script--> 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
@@ -50,7 +50,8 @@
                                 "transform": "perspective(2000) rotateY(" + rotateY + "deg)"
                             });
                         }
-                    });
+                    })
+                    .show();
                 
                 $('#tweet3d ul').roundabout({
                     minScale: 0.7
