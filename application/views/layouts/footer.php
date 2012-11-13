@@ -37,26 +37,25 @@
             })
         </script>
         <script>
-            		$('#tweet3d li')
-                    .bind({
-                        "reposition": function() {
-                            var degrees = $(this).data('roundabout').degrees,
-                                roundaboutBearing = $(this).parent().data('roundabout').bearing,
-                                rotateY = Math.round(roundaboutBearing - degrees);
-                            
-                            $(this).css({
-                                "-webkit-transform": "perspective(2000) rotateY(" + rotateY + "deg)",
-                                "-moz-transform": "perspective(2000) rotateY(" + rotateY + "deg)",
-                                "transform": "perspective(2000) rotateY(" + rotateY + "deg)"
-                            });
-                        }
-                    })
-                    .show();
+        		$('#tweet3d li')
+                .bind({
+                    "reposition": function() {
+                        var degrees = $(this).data('roundabout').degrees,
+                            roundaboutBearing = $(this).parent().data('roundabout').bearing,
+                            rotateY = Math.round(roundaboutBearing - degrees);
+                        $(this).css({
+                            "-webkit-transform": "perspective(2000) rotateY(" + rotateY + "deg)",
+                            "-moz-transform": "perspective(2000) rotateY(" + rotateY + "deg)",
+                            "transform": "perspective(2000) rotateY(" + rotateY + "deg)"
+                        });
+                    }
+                })
+                .show();
                 
                 $('#tweet3d ul').roundabout({
                     minScale: 0.7
                     ,   easing: 'easeOutElastic'
-                    ,   duration: 2000
+                    ,   duration: 1000
                     ,   autoplay: 4000
                     ,   autoplayDuration: 4000
                 });
