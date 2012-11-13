@@ -64,9 +64,19 @@ html, button, input, select, textarea {
 	display: none;
 	height: 13em;
 	width: 20em;
+	background-color: #E8E8E8;
+	cursor: pointer;
+	-webkit-backface-visibility: hidden;
+	--webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 30px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 30px rgba(50, 50, 50, 0.75);
 }
 #tweet3d li.roundabout-in-focus {
 	cursor: default;
+}
+#tweet3d li p {
+	margin-left: 2em;
+	margin-right: 2em;
 }
 #tweet3d li p.hashtag {
 	margin-top: 2em;
@@ -87,6 +97,12 @@ html, button, input, select, textarea {
 #tweet3d li p.footer .date {
 	margin-right: 1em;
 	float: right;
+}
+.tweet-cont {
+    position: relative;
+    width:19em;
+    -webkit-backface-visibility: hidden;
+    zoom: 1;
 }
 .tweet-card {
     background: rgb(246,246,246); /* Old browsers */
@@ -110,12 +126,6 @@ html, button, input, select, textarea {
     -moz-border-radius-bottomleft: 5px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-}
-.tweet-cont {
-    position: relative;
-    width:19em;
-    -webkit-backface-visibility: hidden;
-    zoom: 0.1;
 }
 .tweet-cont .tweet-link {
     background: #3D3D3D;
