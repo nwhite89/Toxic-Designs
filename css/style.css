@@ -101,8 +101,18 @@ html, button, input, select, textarea {
 .tweet-cont {
     position: relative;
     width:19em;
+    width: 90%;
+    left: 5%;
     -webkit-backface-visibility: hidden;
-    zoom: 1;
+    opacity: 0;
+    position: absolute;
+}
+.tweet-cont.active {
+    opacity: 1;
+}
+#tweets {
+	position: relative;
+	height: 148px;
 }
 .tweet-card {
     background: rgb(246,246,246); /* Old browsers */
@@ -119,6 +129,7 @@ html, button, input, select, textarea {
     padding: 1em;
     float: left;
     width: 15em;
+    width: 100%;
     font-size: 14px;
     -webkit-border-top-left-radius: 5px;
     -webkit-border-bottom-left-radius: 5px;
@@ -174,6 +185,9 @@ html, button, input, select, textarea {
 }
 /* Navigation for Tablet and Desktop */
 @media only screen and (min-width: 768px) {
+	#tweets {
+		display: none;
+	}
 	.socialicons {
 		display: inline-block;
 		position: absolute;
@@ -264,6 +278,13 @@ html, button, input, select, textarea {
 }
 /* Navigation for Mobile */
 @media only screen and (max-width: 767px) {
+	.header {
+		border-bottom: 1px dotted #999;
+	}
+	#tweets {
+		margin-top: 10px;
+		display: block;
+	}
 	.sixteen.columns.navi,
 	#header-bar {
 		display: none;

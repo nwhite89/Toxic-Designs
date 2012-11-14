@@ -35,8 +35,31 @@
                             Mobile London iOS app development is finally back underway and should hit the App Store in the next coming months!
                         </div>
                     </div>
-                    <div class="tweet-link">
-                        <a href="http://twitter.com">&gt;</a>
+                </div>
+                <div class="tweet-cont active clearfix">
+                    <div class="tweet-card">
+                        <p class="tag">
+                            #nodejs
+                        </p>
+                        <div class="posted clearfix">
+                            <span class="by"><a href="http://twitter.com/toxicd89" target="_blank">@toxicd89</a></span><span class="date">12/03/2012</span>
+                        </div>
+                        <div class="tweet">
+                            Mobile London iOS app development is finally back underway and should hit the App Store in the next coming months!
+                        </div>
+                    </div>
+                </div>
+                <div class="tweet-cont clearfix">
+                    <div class="tweet-card">
+                        <p class="tag">
+                            #nodejs
+                        </p>
+                        <div class="posted clearfix">
+                            <span class="by"><a href="http://twitter.com/toxicd89" target="_blank">@toxicd89</a></span><span class="date">12/03/2012</span>
+                        </div>
+                        <div class="tweet">
+                            Mobile London iOS app development is finally back underway and should hit the App Store in the next coming months!
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,26 +92,6 @@
                         <li><span>Block 13</span></li>
                         <li><span>Block 14</span></li>
                         <li><span>Block 15</span></li>
-                    </ul>
-                </div>
-                <div id="tweetmobi">
-                    <ul>
-                        <li>
-                            <p class="hashtag">
-                                #Nodejs
-                            </p>
-                            <p class="tweet">
-                                Mobile London iOS app development is finally back underway and should hit the App Store in the next coming months!
-                            </p>
-                            <p class="footer clearfix">
-                                <span class="date">12/11/2012</span>
-                                <span class="user">@toxicd89</span>
-                            </p>
-                        </li>
-                        <li><span>Block 2</span></li>
-                        <li><span>Block 3</span></li>
-                        <li><span>Block 4</span></li>
-                        <li><span>Block 5</span></li>
                     </ul>
                 </div>
             </div>

@@ -19,22 +19,6 @@
             $('.navi-button').on('click', function(e){
                 $('.navi-mobile').slideToggle();
             });
-            jQuery(function($){
-                $('h1').on('click', function (e) {
-                    var x = $('.tweet-banners.active');
-                    var size = 40;
-                    var sizeChange = setInterval(function () {
-                        size-=3;
-                        x.css({width: size + '%'});
-                        if (size <= 0) {
-                            x.hide();
-                            x.removeClass('active');
-                            x.next().addClass('active');
-                            clearInterval(sizeChange);
-                        }
-                    },10);
-                });
-            })
         </script>
         <script>
         		$('#tweet3d li')
@@ -50,7 +34,8 @@
                         });
                     }
                 })
-                .show();
+                .show()
+                ;
                 
                 $('#tweet3d ul').roundabout({
                     minScale: 0.7
@@ -58,6 +43,30 @@
                     ,   duration: 1000
                     ,   autoplay: 4000
                     ,   autoplayDuration: 4000
+                });
+                slideshow = function () {
+                    var activeItem = $('#tweets').children('.active');
+
+                    if (activeItem.next().index() == -1) {
+                        activeItem.animate({left: '-=350', opacity: '0' }, 490, 'swing', function () {
+                            $('#tweets').children().first().animate({opacity: '1'}, 1200, 'swing', function () {
+                                activeItem.removeClass('active').css('left', '5%');
+                                $('#tweets').children().first().addClass('active');
+                            });
+                        });
+                    } else {
+                        activeItem.animate({left: '-=350', opacity: '0' }, 490, 'swing', function () {
+                            activeItem.next().animate({opacity: '1'}, 1200, 'swing', function () {
+                                activeItem.css('left', '5%');
+                                activeItem.removeClass('active').next().addClass('active');
+                            });
+                        });
+                    }
+                }
+
+
+                jQuery(function($){
+                    var x = setInterval("slideshow()", 6000);
                 });
         </script>
     </body>
