@@ -13,7 +13,7 @@
 		private function getTweets($hashtag)
 		{
 			// Recieve tweets based on the hashtag passed to the function
-			$jsonurl = "http://search.twitter.com/search.json?q=%23".$hashtag;
+			$jsonurl = "http://search.twitter.com/search.json?lang=en&q=%23".$hashtag;
 			$json = file_get_contents($jsonurl,0,null,null);
 			$json_output = json_decode($json);
 			$results = $json_output->results;
@@ -32,7 +32,7 @@
 		public function tweets() 
 		{
 			// Set different tweet hashtags wanted for the home page carousel
-			$hash = array('nodejs', 'php', 'web', 'html5', 'jquery', 'javascript', 'dev');
+			$hash = array('nodejs', 'php', 'html5', 'jquery', 'javascript');
 			
 			// Loop through the hashtag array and return the array
 			foreach ($hash as $tag) {
