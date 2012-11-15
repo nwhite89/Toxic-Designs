@@ -15,8 +15,7 @@
 			// Recieve tweets based on the hashtag passed to the function
 			$jsonurl = "http://search.twitter.com/search.json?q=%23".$hashtag;
 			$json = file_get_contents($jsonurl,0,null,null);
-			//$json_output = json_decode($json);
-			$json_output = FastJSON::decode($json);
+			$json_output = json_decode($json);
 			$results = $json_output->results;
 
 			// Get a random tweet from the JSON and remove from the JSON Array
