@@ -19,8 +19,14 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->model('home_model');
+		$data = array (
+			'page'=>'home',
+			'tweets'=>$this->home_model->tweets(),
+		);
+		
 		$this->load->view('layouts/header');
-		$this->load->view('home');
+		$this->load->view('home', $data);
 		$this->load->view('layouts/footer');
 	}
 }

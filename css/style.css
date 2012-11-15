@@ -100,15 +100,15 @@ html, button, input, select, textarea {
 }
 .tweet-cont {
     position: relative;
-    width:19em;
+    left: 2%;
     width: 90%;
-    left: 5%;
     -webkit-backface-visibility: hidden;
     opacity: 0;
     position: absolute;
 }
 .tweet-cont.active {
     opacity: 1;
+    z-index: 9;
 }
 #tweets {
 	position: relative;
@@ -128,7 +128,6 @@ html, button, input, select, textarea {
     border: 1px solid white;
     padding: 1em;
     float: left;
-    width: 15em;
     width: 100%;
     font-size: 14px;
     -webkit-border-top-left-radius: 5px;
@@ -371,6 +370,10 @@ html, button, input, select, textarea {
 @media only screen and (max-width: 479px) {
 	.header h4 {
 		margin-left: 15px;
+	}
+	.tweet-cont {
+	    left: 2%;
+	    width: 85%;
 	}
 }
 .navbar-inverse .navbar-inner, #header-bar {

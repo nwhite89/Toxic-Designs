@@ -23,6 +23,28 @@
                 </ul>
             </div>
             <div id="tweets" class="sixteen columns clearfix">
+                <?php
+                    $x=0;
+                    foreach ($tweets as $tweet)
+                    {
+                        $x++;
+                        ?>
+                            <div class="tweet-cont clearfix<?php if($x==1) { echo ' active';} ?>">
+                                <div class="tweet-card">
+                                    <p class="tag">
+                                        #nodejs
+                                    </p>
+                                    <div class="posted clearfix">
+                                        <span class="by"><a href="http://twitter.com/<?php echo $tweet->from_user;?>" target="_blank">@<?php echo $tweet->from_user;?></a></span><span class="date"><?php echo date("d/m/Y", strtotime($tweet->created_at));?></span>
+                                    </div>
+                                    <div class="tweet">
+                                        <?php echo $tweet->text;?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php
+                    }
+                ?>
                 <div class="tweet-cont clearfix">
                     <div class="tweet-card">
                         <p class="tag">
@@ -36,7 +58,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tweet-cont active clearfix">
+                <div class="tweet-cont clearfix">
                     <div class="tweet-card">
                         <p class="tag">
                             #nodejs
@@ -114,3 +136,8 @@
             </div>
 
         </div><!-- container -->
+        <?php
+            print '<pre>';
+               print_r($tweets);
+            print '</pre>';
+        ?>
