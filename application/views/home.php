@@ -45,75 +45,29 @@
                         <?php
                     }
                 ?>
-                <div class="tweet-cont clearfix">
-                    <div class="tweet-card">
-                        <p class="tag">
-                            #nodejs
-                        </p>
-                        <div class="posted clearfix">
-                            <span class="by"><a href="http://twitter.com/toxicd89" target="_blank">@toxicd89</a></span><span class="date">12/03/2012</span>
-                        </div>
-                        <div class="tweet">
-                            Mobile London iOS app development is finally back underway and should hit the App Store in the next coming months!
-                        </div>
-                    </div>
-                </div>
-                <div class="tweet-cont clearfix">
-                    <div class="tweet-card">
-                        <p class="tag">
-                            #nodejs
-                        </p>
-                        <div class="posted clearfix">
-                            <span class="by"><a href="http://twitter.com/toxicd89" target="_blank">@toxicd89</a></span><span class="date">12/03/2012</span>
-                        </div>
-                        <div class="tweet">
-                            Mobile London iOS app development is finally back underway and should hit the App Store in the next coming months!
-                        </div>
-                    </div>
-                </div>
-                <div class="tweet-cont clearfix">
-                    <div class="tweet-card">
-                        <p class="tag">
-                            #nodejs
-                        </p>
-                        <div class="posted clearfix">
-                            <span class="by"><a href="http://twitter.com/toxicd89" target="_blank">@toxicd89</a></span><span class="date">12/03/2012</span>
-                        </div>
-                        <div class="tweet">
-                            Mobile London iOS app development is finally back underway and should hit the App Store in the next coming months!
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="sixteen columns clearfix">
                 <div id="tweet3d">
                     <ul>
-                        <li>
-                            <p class="hashtag">
-                                #Nodejs
-                            </p>
-                            <p class="tweet">
-                                Mobile London iOS app development is finally back underway and should hit the App Store in the next coming months!
-                            </p>
-                            <p class="footer clearfix">
-                                <span class="date">12/11/2012</span>
-                                <span class="user">@toxicd89</span>
-                            </p>
-                        </li>
-                        <li><span>Block 2</span></li>
-                        <li><span>Block 3</span></li>
-                        <li><span>Block 4</span></li>
-                        <li><span>Block 5</span></li>
-                        <li><span>Block 6</span></li>
-                        <li><span>Block 7</span></li>
-                        <li><span>Block 8</span></li>
-                        <li><span>Block 9</span></li>
-                        <li><span>Block 10</span></li>
-                        <li><span>Block 11</span></li>
-                        <li><span>Block 12</span></li>
-                        <li><span>Block 13</span></li>
-                        <li><span>Block 14</span></li>
-                        <li><span>Block 15</span></li>
+                        <?php
+                            foreach ($tweets as $tweet) 
+                            {
+                                ?>
+                                <li>
+                                    <p class="hashtag">
+                                        #nodejs
+                                    </p>
+                                    <p class="tweet">
+                                        <?php echo $tweet->text; ?>
+                                    </p>
+                                    <p class="footer clearfix">
+                                        <span class="date"><?php echo date("d/m/Y", strtotime($tweet->created_at));?></span>
+                                        <span class="user"><a href="http://twitter.com/<?php echo $tweet->from_user;?>" target="_blank">@<?php echo $tweet->from_user;?></a></span>
+                                    </p>
+                                </li>
+                                <?php
+                                }
+                            ?>
                     </ul>
                 </div>
             </div>
@@ -136,8 +90,3 @@
             </div>
 
         </div><!-- container -->
-        <?php
-            print '<pre>';
-               print_r($tweets);
-            print '</pre>';
-        ?>
