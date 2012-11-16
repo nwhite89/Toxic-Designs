@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>I love weener - ooorah!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
@@ -34,19 +34,19 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav">
                             <li class="home">
-                                <a class="home" href="#">home</a>
+                                <a class="home" href="#" title="I love weener - ooorah!">home</a>
                             </li>
                             <li class="labs">
-                                <a class="labs" href="#">labs</a>
+                                <a class="labs" href="#" title="I love weener - ooorah!">labs</a>
                             </li>
                             <li class="development">
-                                <a class="development" href="#">development</a>
+                                <a class="development" href="#" title="I love weener - ooorah!">development</a>
                             </li>
                             <li class="blog">
-                                <a class="blog" href="#">blog</a>
+                                <a class="blog" href="#" title="I love weener - ooorah!">blog</a>
                             </li>
                             <li class="about-me">
-                                <a class="about-me" href="#">about me</a>
+                                <a class="about-me" href="#" title="I love weener - ooorah!">about me</a>
                             </li>
                         </ul>
                     </div>

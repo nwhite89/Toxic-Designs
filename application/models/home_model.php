@@ -10,6 +10,7 @@
 			parent::__construct();
 		}
 
+		/*
 		private function getTweets($hashtag)
 		{
 			// Recieve tweets based on the hashtag passed to the function
@@ -28,16 +29,28 @@
 			$item = rand(0, (count($results)-1));
 			$this->tweetsArray[] = $results[$item];
 		}
-
+		*/
 		public function tweets() 
 		{
 			// Set different tweet hashtags wanted for the home page carousel
 			$hash = array('nodejs', 'php', 'html5', 'jquery', 'javascript');
 			
 			// Loop through the hashtag array and return the array
-			foreach ($hash as $tag) {
+			/*foreach ($hash as $tag) {
 				$this->getTweets($tag);
+			}*/
+			$query = $this->db->query('SELECT * FROM td_tweet_cache ORDER BY RAND() LIMIT 15');
+
+			foreach ($query->result() as $row)
+			{
+				$x = array();
+				$x['user'] = $row->user;
+				$x['date'] = $row->date;
+				$x['text'] = $row->text;
+				$x['hashtag'] = $row->hashtag;
+				$this->tweetsArray[] = $x;
 			}
+
 			return $this->tweetsArray;
 		}
 

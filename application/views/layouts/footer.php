@@ -44,6 +44,7 @@
                     ,   autoplay: 4000
                     ,   autoplayDuration: 4000
                 });
+                
                 slideshow = function () {
                     var activeItem = $('#tweets').children('.active');
 

@@ -6,19 +6,19 @@
             <div class="sixteen columns navi">
                 <ul>
                     <li>
-                        <a class="home" href="#">home</a>
+                        <a class="home" href="#" title="I love weener - ooorah!">home</a>
                     </li>
                     <li>
-                        <a class="labs" href="#">labs</a>
+                        <a class="labs" href="#" title="I love weener - ooorah!">labs</a>
                     </li>
                     <li>
-                        <a class="development" href="#">development</a>
+                        <a class="development" href="#" title="I love weener - ooorah!">development</a>
                     </li>
                     <li>
-                        <a class="blog" href="#">blog</a>
+                        <a class="blog" href="#" title="I love weener - ooorah!">blog</a>
                     </li>
                     <li>
-                        <a class="about-me" href="#">about me</a>
+                        <a class="about-me" href="#" title="I love weener - ooorah!">about me</a>
                     </li>
                 </ul>
             </div>
@@ -32,13 +32,13 @@
                             <div class="tweet-cont clearfix<?php if($x==1) { echo ' active';} ?>">
                                 <div class="tweet-card">
                                     <p class="tag">
-                                        #nodejs
+                                        #<?php echo $tweet['hashtag']; ?>
                                     </p>
                                     <div class="posted clearfix">
-                                        <span class="by"><a href="http://twitter.com/<?php echo $tweet->from_user;?>" target="_blank">@<?php echo $tweet->from_user;?></a></span><span class="date"><?php echo date("d/m/Y", strtotime($tweet->created_at));?></span>
+                                        <span class="by"><a href="http://twitter.com/<?php echo $tweet['user'];?>" target="_blank">@<?php echo $tweet['user'];?></a></span><span class="date"><?php echo $tweet['date'];?></span>
                                     </div>
                                     <div class="tweet">
-                                        <?php echo $tweet->text;?>
+                                        <?php echo $tweet['text'];?>
                                     </div>
                                 </div>
                             </div>
@@ -55,14 +55,14 @@
                                 ?>
                                 <li>
                                     <p class="hashtag">
-                                        #nodejs
+                                         #<?php echo $tweet['hashtag']; ?>
                                     </p>
                                     <p class="tweet">
-                                        <?php echo $tweet->text; ?>
+                                        <?php echo $tweet['text']; ?>
                                     </p>
                                     <p class="footer clearfix">
-                                        <span class="date"><?php echo date("d/m/Y", strtotime($tweet->created_at));?></span>
-                                        <span class="user"><a href="http://twitter.com/<?php echo $tweet->from_user;?>" target="_blank">@<?php echo $tweet->from_user;?></a></span>
+                                        <span class="date"><?php echo $tweet['date']; ?></span>
+                                        <span class="user"><a href="http://twitter.com/<?php echo $tweet['user'];?>" target="_blank" title="I love weener - ooorah!">@<?php echo $tweet['user'];?></a></span>
                                     </p>
                                 </li>
                                 <?php
@@ -86,7 +86,7 @@
             </div>
             <div class="one-third column">
                 <h3>Docs &amp; Support</h3>
-                <p>The easiest way to really get started with Skeleton is to check out the full docs and info at <a href="http://www.getskeleton.com">www.getskeleton.com.</a>. Skeleton is also open-source and has a <a href="https://github.com/dhgamache/skeleton">project on git</a>, so check that out if you want to report bugs or create a pull request. If you have any questions, thoughts, concerns or feedback, please don't hesitate to email me at <a href="mailto:hi@getskeleton.com">hi@getskeleton.com</a>.</p>
+                <p>The easiest way to really get started with Skeleton is to check out the full docs and info at <a href="http://www.getskeleton.com" title="I love weener - ooorah!">www.getskeleton.com.</a>. Skeleton is also open-source and has a <a href="https://github.com/dhgamache/skeleton">project on git</a>, so check that out if you want to report bugs or create a pull request. If you have any questions, thoughts, concerns or feedback, please don't hesitate to email me at <a href="mailto:hi@getskeleton.com">hi@getskeleton.com</a>.</p>
             </div>
 
         </div><!-- container -->
