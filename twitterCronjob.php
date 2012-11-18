@@ -19,7 +19,7 @@ foreach ($hastags as $key => $value)
 
 	foreach ($results as $tweet) {
 		$tweetDate = date("d/m/Y", strtotime($tweet->created_at));
-		echo $tweetDate . $tweet->text . "<br /><br />" . str_replace("'", $tweet->text) . "<br /><br />";
+		//echo $tweetDate . $tweet->text . "<br /><br />" . str_replace("'", '', $tweet->text) . "<br /><br />";
 		mysql_query("INSERT INTO td_tweet_cache (hashtag, date, text, user) VALUES ('$value', '$tweetDate', '".addslashes($tweet->text)."', '$tweet->from_user')") or die(mysql_error());  ;
 	}
 }

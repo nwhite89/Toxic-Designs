@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>I love weener - ooorah!</title>
+        <title>Nick White Portfolio - <?php echo $title; ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
@@ -22,7 +22,7 @@
         <!--<![endif]-->
         <script src="<?php echo base_url(); ?>js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body class="home">
+    <body class="<?php echo $class; ?>">
         <div class="navbar navbar-inverse">
             <div class="navbar-inner">
                 <div class="container">
@@ -34,19 +34,19 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav">
                             <li class="home">
-                                <a class="home" href="#" title="I love weener - ooorah!">home</a>
+                                <a class="home" href="<?php echo base_url(); ?>" title="Home">home</a>
                             </li>
                             <li class="labs">
-                                <a class="labs" href="#" title="I love weener - ooorah!">labs</a>
+                                <a class="labs" href="#" title="Labs">labs</a>
                             </li>
                             <li class="development">
-                                <a class="development" href="#" title="I love weener - ooorah!">development</a>
+                                <a class="development" href="#" title="Development">development</a>
                             </li>
                             <li class="blog">
-                                <a class="blog" href="#" title="I love weener - ooorah!">blog</a>
+                                <a class="blog" href="#" title="Blog">blog</a>
                             </li>
                             <li class="about-me">
-                                <a class="about-me" href="#" title="I love weener - ooorah!">about me</a>
+                                <a class="about-me" href="<?php echo base_url(); ?>/about-me" title="About me">about me</a>
                             </li>
                         </ul>
                     </div>
@@ -63,3 +63,27 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="sixteen columns header">
+                <h1>nick white</h1>
+                <h4><span>&lt;&#47;</span> front-end web developer <span>&gt;</span></h4>
+            </div>
+            <div class="sixteen columns navi">
+                <ul>
+                    <li>
+                        <a class="home" href="<?php echo base_url(); ?>" title="Home">home</a>
+                    </li>
+                    <li>
+                        <a class="labs" href="#" title="Labs">labs</a>
+                    </li>
+                    <li>
+                        <a class="development" href="#" title="Development">development</a>
+                    </li>
+                    <li>
+                        <a class="blog" href="#" title="Blog">blog</a>
+                    </li>
+                    <li>
+                        <a class="about-me" href="<?php echo base_url(); ?>about-me" title="About Me">about me</a>
+                    </li>
+                </ul>
+            </div>

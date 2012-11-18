@@ -1,27 +1,3 @@
-<div class="container">
-            <div class="sixteen columns header">
-                <h1>nick white</h1>
-                <h4><span>&lt;&#47;</span> front-end web developer <span>&gt;</span></h4>
-            </div>
-            <div class="sixteen columns navi">
-                <ul>
-                    <li>
-                        <a class="home" href="#" title="I love weener - ooorah!">home</a>
-                    </li>
-                    <li>
-                        <a class="labs" href="#" title="I love weener - ooorah!">labs</a>
-                    </li>
-                    <li>
-                        <a class="development" href="#" title="I love weener - ooorah!">development</a>
-                    </li>
-                    <li>
-                        <a class="blog" href="#" title="I love weener - ooorah!">blog</a>
-                    </li>
-                    <li>
-                        <a class="about-me" href="#" title="I love weener - ooorah!">about me</a>
-                    </li>
-                </ul>
-            </div>
             <div id="tweets" class="sixteen columns clearfix">
                 <?php
                     $x=0;

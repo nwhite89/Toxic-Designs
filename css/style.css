@@ -233,6 +233,7 @@ html, button, input, select, textarea {
 	/* -- Navigation -- */
 	.navi {
 		border-bottom: 1px dotted #999;
+		margin-bottom: 10px;
 	}
 	.navi ul {
 		list-style-type: none;
@@ -291,6 +292,7 @@ html, button, input, select, textarea {
 @media only screen and (max-width: 767px) {
 	.header {
 		border-bottom: 1px dotted #999;
+		margin-bottom: 10px!important;
 	}
 	#tweets {
 		margin-top: 20px;
@@ -398,4 +400,34 @@ html, button, input, select, textarea {
 	background-repeat: repeat-x;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff111111', GradientType=0);
 	border-color: #252525;
+}
+.about-section {
+	position: relative;
+}
+.label.about {
+	position: absolute;
+	display: inline;
+	top: 5px;
+	left: -45px;
+	background: #81519c;
+	font-style: normal;
+	padding: 8px 5px 5px;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: .16em;
+	line-height: 12px;
+	transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg); /* IE 9 */
+	-webkit-transform: rotate(-90deg); /* Safari and Chrome */
+	-o-transform: rotate(-90deg); /* Opera */
+	-moz-transform: rotate(-90deg); /* Firefox */
+}
+.label.about.twitter {
+	left: -60px;
+	top: 20px;
+}
+.label.about.experience {
+	top: 50px;
+	left: -90px;
 }
