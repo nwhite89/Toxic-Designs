@@ -1,4 +1,4 @@
-    <div class="sixteen columns about-section">
+    <div class="eight columns about-section">
         <span class="label about bio">Bio</span>
         <p>
             I am a recent graduate of the University of Portsmouth, graduating with a First Class (Hons) 
