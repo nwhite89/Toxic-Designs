@@ -11,15 +11,17 @@
 
     <div class="eight columns about-section">
         <span class="label about experience">Codeing Skills</span>
-        <p>PHP</p>
-        <p>JavaScript</p>
-        <p>Node.js</p>
-        <p>MySQL</p>
-        <p>SharePoint 2007</p>
-        <p>SharePoint 2010</p>
-        <p>XML</p>
-        <p>XSLT</p>
-        <p>HTML5</p>
-        <p>CSS3</p>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>PHP</li>
+            <li>JavaScript</li>
+            <li>jQuery</li>
+            <li>Node.js</li>
+            <li>MySQL</li>
+            <li>SharePoint 2007 / 2010</li>
+            <li>XML</li>
+            <li>XSLT</li>
+        </ul>
     </div>
 </div><!--#container-->
