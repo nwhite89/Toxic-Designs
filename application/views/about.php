@@ -10,18 +10,24 @@
     </div>
 
     <div class="eight columns about-section">
-        <span class="label about experience">Codeing Skills</span>
+        <span class="label about experience">Coding Skills</span>
         <ul>
             <li>HTML5</li>
             <li>CSS3</li>
+            <li>Node.js</li>
             <li>PHP</li>
+            <li>Git</li>
             <li>JavaScript</li>
             <li>jQuery</li>
-            <li>Node.js</li>
             <li>MySQL</li>
             <li>SharePoint 2007 / 2010</li>
             <li>XML</li>
             <li>XSLT</li>
+            <li>Oracle SQL</li>
         </ul>
+    </div>
+
+    <div class="eight columns about-section">
+        <span class="label about instagram">My Instagram Photos</span>
     </div>
 </div><!--#container-->
