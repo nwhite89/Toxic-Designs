@@ -197,6 +197,15 @@ html, button, input, select, textarea {
 .tweet-card .posted .by {
     float: right;
 }
+.instagram-photos {
+	text-align: center;
+}
+.instagram-photos .photo {
+	margin: 0 1px 3px 2px;
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+}
 /* Navigation for Tablet and Desktop */
 @media only screen and (min-width: 768px) {
 	#tweets {
@@ -392,6 +401,12 @@ html, button, input, select, textarea {
 	    left: 2%;
 	    width: 85%;
 	}
+	.instagram-photos .photo {
+		margin: 0 0 5px 0;
+	}
+	.instagram-photos .photo:nth-child(9) {
+		display: none;
+	}
 }
 .navbar-inverse .navbar-inner, #header-bar {
 	background-color: #333;
@@ -421,8 +436,8 @@ html, button, input, select, textarea {
 	left: -45px;
 	*/
 	margin-bottom: 10px;
-	padding: 6px 5px 5px;
-	width: 100%;
+	padding: 6px 7% 5px 3%;
+	width: 90%;
 	background: #81519c;
 	font-style: normal;
 	color: #fff;
@@ -430,12 +445,4 @@ html, button, input, select, textarea {
 	font-size: 12px;
 	letter-spacing: .16em;
 	line-height: 12px;
-}
-.label.about.twitter {
-	left: -60px;
-	top: 20px;
-}
-.label.about.experience {
-	top: 50px;
-	left: -90px;
 }
