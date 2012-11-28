@@ -12,6 +12,7 @@ class About_me extends CI_Controller
 		);
 		$data = array(
 			'instagram' => $this->about_model->instagram(),
+			'social' => $this->about_model->social(),
 		);
 		$this->load->view('layouts/header', $header);
 		$this->load->view('about.php', $data);

@@ -40,5 +40,16 @@
 			//$this->getInstagramPhotos();
 			return $this->instagramPhotos;
 		}
+
+		public function social ()
+		{
+			$query = $this->db->get('td_about_social');
+
+			if ($query->num_rows() > 0) {  
+				return $query->result(); 
+			} else {  
+				show_error('Database is empty!');   
+			}
+		}
 	}
 ?>
