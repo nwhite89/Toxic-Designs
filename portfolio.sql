@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 28, 2012 at 03:29 PM
+-- Generation Time: Nov 28, 2012 at 09:02 PM
 -- Server version: 5.5.24
--- PHP Version: 5.3.10-1ubuntu3.2
+-- PHP Version: 5.3.10-1ubuntu3.4
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -68,6 +68,23 @@ INSERT INTO `td_about_social` (`id`, `label`, `username`, `url`) VALUES
 (2, 'Github', 'nwhite89', 'https://github.com/nwhite89'),
 (3, 'linkedin', 'Nick White', 'http://www.linkedin.com/profile/view?id=156575662'),
 (4, 'instagram', 'nwhite89', 'http://instagram.com/nwhite89');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `td_development`
+--
+
+DROP TABLE IF EXISTS `td_development`;
+CREATE TABLE IF NOT EXISTS `td_development` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `thumbnail` text NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `summary` int(11) NOT NULL,
+  `url` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
