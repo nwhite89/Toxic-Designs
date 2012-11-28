@@ -16,10 +16,6 @@
                 echo '<p><span class="socialLabel">' . $value->label . '</span><a target="_blank" href="' . $value->url .'">' . $value->username . '</a></p>';
             }
             ?>
-            <!--p><span class="socialLabel">Twitter</span>@ToxicD89</p>
-            <p><span class="socialLabel">LinkedIn</span>Nick White</p>
-            <p><span class="socialLabel">Github</span>nwhite89</p>
-            <p><span class="socialLabel">Instagram</span>nwhite89</p-->
         </div>
         <span class="label about instagram">My Instagram</span>
         <div class="instagram-photos">
