@@ -1,11 +1,13 @@
     <div class="eight columns about-section">
         <span class="label about bio">Bio</span>
         <p>
-            I am a recent graduate of the University of Portsmouth, graduating with a First Class (Hons) 
-            in Business Information Systems. I have since started working at a Digital Agency called Content Formula LTD,
-            as a Website Developer working mainly on PHP, SharePoint 2007 &amp; 2010 development. My job role also consists
-            of working with Project and Account Managers to provide Written Requirements for other developers to use to complete
-            build work.
+            I recently graduated with a First Class (Hons) in Business Information Systems whilst attending the University of Portsmouth. Since which I have returned working at a 
+            digital agency called Content Formula LTD, that I completed a sandwich course during my third year of study.
+            <br /><br />
+            My current job roles is Website Developer which I work mainly with PHP, SharePoint 2007 and 2010. 
+            Using different skills whether it is jQuery, CSS3, HTML5 or XSLT to meet the clients desired end result. 
+            Other than development I also work largely with Project and Account Managers to provide written requirements for other developers to build from as well as working on IA 
+            and checking wireframes to ensure what is proposed is possible.
         </p>
         <span class="label about skills">Coding Skills</span>
         <ul>
@@ -22,6 +24,8 @@
             <li>XML</li>
             <li>XSLT</li>
         </ul>
+    </div>
+    <div class="eight columns about-section">
         <span class="label about social">Social Media</span>
         <div class="clearfix">
             <p><span class="socialLabel">Twitter</span>@ToxicD89</p>
@@ -29,13 +33,11 @@
             <p><span class="socialLabel">Github</span>nwhite89</p>
             <p><span class="socialLabel">Instagram</span>nwhite89</p>
         </div>
-    </div>
-    <div class="eight columns about-section">
         <span class="label about instagram">My Instagram</span>
         <div class="instagram-photos">
             <?php
             foreach ($instagram as $key => $value) {
-                echo '<div class="photo" style="background-image: url('. $value .')"></div>';
+                echo '<div class="photo" style="background-image: url('. $value['thumbnail_url'] .')"></div>';
             }
             ?>
         </div>
