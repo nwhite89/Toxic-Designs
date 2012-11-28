@@ -245,6 +245,21 @@ html, button, input, select, textarea {
 	letter-spacing: .16em;
 	line-height: 12px;
 }
+.socialLabel {
+	margin-bottom: 10px;
+	padding: 6px 1% 5px 3%;
+	width: auto;
+	border-right: 5px solid #81519C;
+	font-style: normal;
+	color: black;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: .16em;
+	line-height: 12px;
+	margin-right: 5px;
+	font-weight: bold;
+	display: inline-block;
+}
 /* Navigation for Tablet and Desktop */
 @media only screen and (min-width: 768px) {
 	#tweets {
@@ -362,7 +377,7 @@ html, button, input, select, textarea {
 		filter: none;
 
 		transition: filter 3s;
-		/*-moz-transition: -moz-filter 3s;  Firefox 4 */
+		-moz-transition: -moz-filter 3s; /* Firefox 4 */
 		-moz-transition: filter 3s; /* Firefox 4 */
 		-webkit-transition: -webkit-filter 3s; /* Safari and Chrome */
 		-o-transition: -o-filter 3s; /* Opera */
