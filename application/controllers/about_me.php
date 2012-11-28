@@ -16,7 +16,7 @@ class About_me extends CI_Controller
 			'content' => $this->about_model->content(),
 		);
 		$this->load->view('layouts/header', $header);
-		$this->load->view('about.php', $data);
+		$this->load->view('about', $data);
 		$this->load->view('layouts/footer');
 	}
 }
