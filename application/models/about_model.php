@@ -51,5 +51,17 @@
 				show_error('Database is empty!');   
 			}
 		}
+
+		public function content ()
+		{
+			$query = $this->db->get('td_about_content');
+			if ($query->num_rows() > 0)
+			{  
+				return $query->result(); 
+			} else 
+			{  
+				show_error('Database is empty!');   
+			}
+		}
 	}
 ?>
