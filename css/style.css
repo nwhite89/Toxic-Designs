@@ -248,7 +248,8 @@ html, button, input, select, textarea {
 .socialLabel {
 	margin-bottom: 10px;
 	padding: 6px 1% 5px 3%;
-	width: auto;
+	width: 80px;
+	text-align: right;
 	border-right: 5px solid #81519C;
 	font-style: normal;
 	color: black;
@@ -259,6 +260,31 @@ html, button, input, select, textarea {
 	margin-right: 5px;
 	font-weight: bold;
 	display: inline-block;
+}
+a.social {
+	text-decoration: none;
+	font-size: 0.9em;
+	color: #81519C;
+}
+a.social:hover {
+	color: black;
+}
+.codeSkills {
+	list-style: none;
+}
+.codeSkills li {
+	display: inline-block;
+	width: 105px;
+	margin-bottom: 20px;
+	font-size: 0.9em;
+}
+.codeSkills .labelTick {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 5px;
+	background: url(../img/tick.png) #81519C no-repeat 5px 5px;
+	margin-right: 5px;
 }
 /* Navigation for Tablet and Desktop */
 @media only screen and (min-width: 768px) {

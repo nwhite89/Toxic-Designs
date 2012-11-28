@@ -5,7 +5,6 @@
             echo '<span class="label about ' . $value->class . '">' . $value->heading . '</span>';
             echo $value->content;
         }
-
         ?>
     </div>
     <div class="eight columns about-section">
@@ -13,7 +12,7 @@
         <div class="clearfix">
             <?php
             foreach ($social as $value) {
-                echo '<p><span class="socialLabel">' . $value->label . '</span><a target="_blank" href="' . $value->url .'">' . $value->username . '</a></p>';
+                echo '<p><span class="socialLabel">' . $value->label . '</span><a class="social" target="_blank" href="' . $value->url .'">' . $value->username . '</a></p>';
             }
             ?>
         </div>
