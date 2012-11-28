@@ -18,13 +18,13 @@
 			$data = $json_output->data;
 			//print '<pre>';
 			//	print_r($data);
+			//print '</pre>';
 			foreach ($data as $key => $value) {
 				if ($key < 9)
 				{
 					$this->instagramPhotos[] = $value->images->thumbnail->url;
 				}
 			}
-			//print '</pre>';
 		}
 
 		public function instagram()

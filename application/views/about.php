@@ -1,6 +1,6 @@
     <div id="about-accordion">
         <div class="eight columns about-section">
-            <span class="label about bio" data-toggle="collapse" data-parent="#about-accordion" href="#collapseOne">Bio</span>
+            <span class="label about bio" data-toggle="collapse" data-target="#collapseOne">Bio</span>
             <p id="collapseOne">
                 I am a recent graduate of the University of Portsmouth, graduating with a First Class (Hons) 
                 in Business Information Systems. I have since started working at a Digital Agency called Content Formula LTD,
@@ -8,18 +8,17 @@
                 of working with Project and Account Managers to provide Written Requirements for other developers to use to complete
                 build work.
             </p>
-            <span class="label about instagram" data-toggle="collapse" data-parent="#about-accordion" href="#collapseTwo">My Instagram Photos</span>
+            <span class="label about instagram" data-toggle="collapse" data-target="#collapseTwo">My Instagram Photos</span>
             <div class="instagram-photos" id="collapseTwo">
                 <?php
                 foreach ($instagram as $key => $value) {
                     echo '<div class="photo" style="background-image: url('. $value .')"></div>';
-                    //echo '<img src="' . $value . '" />';
                 }
                 ?>
             </div>
         </div>
         <div class="eight columns about-section">
-            <span class="label about experience" data-toggle="collapse" data-parent="#about-accordion" href="#collapseThree">Coding Skills</span>
+            <span class="label about experience" data-toggle="collapse" data-target="#collapseThree">Coding Skills</span>
             <ul id="collapseThree">
                 <li>HTML5</li>
                 <li>CSS3</li>

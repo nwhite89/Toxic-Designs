@@ -201,10 +201,49 @@ html, button, input, select, textarea {
 	text-align: center;
 }
 .instagram-photos .photo {
-	margin: 0 1px 3px 2px;
+	margin: 0 1px 3px 1px;
 	width: 150px;
 	height: 150px;
 	display: inline-block;
+	background-repeat: no-repeat;
+}
+.navbar-inverse .navbar-inner, #header-bar {
+	background-color: #333;
+	background-image: -moz-linear-gradient(top, #333, #111);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333), to(#111));
+	background-image: -webkit-linear-gradient(top, #333, #111);
+	background-image: -o-linear-gradient(top, #333, #111);
+	background-image: linear-gradient(to bottom, #333, #111);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff111111', GradientType=0);
+	border-color: #252525;
+}
+.about-section {
+	position: relative;
+}
+.label.about {
+	/*
+	position: absolute;
+	display: inline;
+	transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	top: 5px;
+	padding: 8px 5px 5px;
+	left: -45px;
+	*/
+	margin-bottom: 10px;
+	padding: 6px 7% 5px 3%;
+	width: 90%;
+	background: #81519c;
+	font-style: normal;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: .16em;
+	line-height: 12px;
 }
 /* Navigation for Tablet and Desktop */
 @media only screen and (min-width: 768px) {
@@ -299,6 +338,27 @@ html, button, input, select, textarea {
 	#tweetmobi {
 		display: none;
 	}
+	.instagram-photos .photo {
+		filter: blur(0px) saturate(0%);
+		-webkit-filter: blur(0px) saturate(0%);
+		-moz-filter: blur(0px) saturate(0%);
+		-ms-filter: blur(0px) saturate(0%);
+		-o-filter: blur(0px) saturate(0%);
+	}
+	.instagram-photos .photo:hover {
+		margin-left: 1px;
+		margin-right: 1px;
+		filter: sepia(0%);
+		-webkit-filter: blur(0px) saturate(100%);
+		-moz-filter: blur(0px) saturate(100%);
+		-ms-filter: blur(0px) saturate(100%);
+		-o-filter: blur(0px) saturate(100%);
+
+		transition: filter 3s;
+		-moz-transition: -moz-filter 3s; /* Firefox 4 */
+		-webkit-transition: -webkit-filter 3s; /* Safari and Chrome */
+		-o-transition: -o-filter 3s; /* Opera */
+	}
 }
 /* Navigation for Mobile */
 @media only screen and (max-width: 767px) {
@@ -392,6 +452,20 @@ html, button, input, select, textarea {
 	#tweet3d {
 		display: none;
 	}
+	.instagram-photos .photo:nth-child(9) {
+		display: none;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.instagram-photos .photo:nth-child(9) {
+		display: none;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.label.about {
+		padding: 10px 7% 10px 3%;
+		cursor: pointer;
+	}
 }
 @media only screen and (max-width: 479px) {
 	.header h4 {
@@ -407,42 +481,4 @@ html, button, input, select, textarea {
 	.instagram-photos .photo:nth-child(9) {
 		display: none;
 	}
-}
-.navbar-inverse .navbar-inner, #header-bar {
-	background-color: #333;
-	background-image: -moz-linear-gradient(top, #333, #111);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333), to(#111));
-	background-image: -webkit-linear-gradient(top, #333, #111);
-	background-image: -o-linear-gradient(top, #333, #111);
-	background-image: linear-gradient(to bottom, #333, #111);
-	background-repeat: repeat-x;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff111111', GradientType=0);
-	border-color: #252525;
-}
-.about-section {
-	position: relative;
-}
-.label.about {
-	/*
-	position: absolute;
-	display: inline;
-	transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);
-	-webkit-transform: rotate(-90deg);
-	-o-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	top: 5px;
-	padding: 8px 5px 5px;
-	left: -45px;
-	*/
-	margin-bottom: 10px;
-	padding: 6px 7% 5px 3%;
-	width: 90%;
-	background: #81519c;
-	font-style: normal;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 12px;
-	letter-spacing: .16em;
-	line-height: 12px;
 }

@@ -47,3 +47,11 @@
 .navi-mobile, .navi-button {
 	display: none!important;
 }
+.instagram-photos .photo {
+	filter: url(desaturate.svg#greyscale);
+	filter: gray;
+}
+.instagram-photos .photo:hover {
+	filter: url();
+	filter: color;
+}
