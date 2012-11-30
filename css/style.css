@@ -531,3 +531,22 @@ a.social:hover {
 		display: none;
 	}
 }
+#project-view {
+	margin-top: 800px;
+	height: 200px;
+	width: 100%;
+	display: none;
+	text-align: center;
+}
+.project {
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	border-radius: 200px;
+	background: #EE7E2A;
+	color: white;
+	text-align: center;
+	line-height: 200px;
+	margin-top: 20px;
+	cursor: pointer;
+}

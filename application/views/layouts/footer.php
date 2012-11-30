@@ -63,6 +63,10 @@
 
                 jQuery(function($){
                     var x = setInterval("slideshow()", 6000);
+                    $('div.project').click(function () {
+                        $('#project-view').show();
+                        $('html, body').animate({scrollTop: $("#project-view").offset().top}, 1000);
+                    })
                 });
         </script>
     </body>
