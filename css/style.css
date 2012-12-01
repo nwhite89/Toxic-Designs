@@ -538,6 +538,10 @@ a.social:hover {
 	display: none;
 	text-align: center;
 }
+#project-view img {
+	height: auto;
+	max-width: 100%;
+}
 .project {
 	width: 200px;
 	height: 200px;
@@ -549,6 +553,8 @@ a.social:hover {
 	line-height: 200px;
 	margin-top: 20px;
 	cursor: pointer;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	letter-spacing: .1em;
 }
 .project p {
 	position: absolute;
@@ -557,7 +563,7 @@ a.social:hover {
 .project div {
 	border: 0;
 	border-radius: 200px;
-	opacity: 0.3;
+	opacity: 0.1;
 }
 .project div:hover {
 	opacity: 0;
@@ -568,4 +574,6 @@ a.social:hover {
 	height: 200px;
 	width: 100px;
 	bottom: 0;
+	display: none;
+	cursor: pointer;
 }

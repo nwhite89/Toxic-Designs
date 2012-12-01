@@ -55,3 +55,6 @@
 	filter: url();
 	filter: color;
 }
+#project-view img {
+	width: auto; /* for ie 8 */
+}

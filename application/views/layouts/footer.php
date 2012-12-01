@@ -66,10 +66,33 @@
                     $('div.project').click(function () {
                         $('#project-view').show();
                         $('div.backTop').show();
-                        $('html, body').animate({scrollTop: $("#project-view").offset().top}, 1000);
+                        $('html, body').animate(
+                            {
+                                scrollTop: $("#project-view").offset().top
+                            }, 
+                            {
+                                queue: false,
+                                duration: 1000,
+                                complete: function () {
+                                    $('div.backTop').show();
+                                }
+                            }
+                        );
                     });
                     $('div.backTop').click(function() {
-                        $('html, body').animate({scrollTop: $("html").offset().top}, 1000);
+                        $('html, body').animate(
+                            {
+                                scrollTop: $("html").offset().top
+                            }, 
+                            {
+                                queue: false,
+                                duration: 1000,
+                                complete: function () {
+                                    $('div.backTop').hide();;
+                                    $('#project-view').hide();
+                                }
+                        });
+
                     });
                 });
         </script>
