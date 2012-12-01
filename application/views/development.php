@@ -1,7 +1,8 @@
 <div class="sixteen columns" id="projects">
 	<div class="five columns">
 		<div class="project">
-			Mobile London Node.js
+			<p>Mobile London Nodejs</p>
+			<div style="background-image: url(../img/projects/thumbnails/mobilelondon.png)">&nbsp;</div>
 		</div>
 	</div>
 	<div class="five columns">
@@ -32,4 +33,6 @@
 	<img src="../img/projects/mobilelondon.png" />
 	<div class="website">
 	</div>
+</div>
+<div class="backTop">
 </div>

@@ -533,7 +533,7 @@ a.social:hover {
 }
 #project-view {
 	margin-top: 800px;
-	height: 200px;
+	height: auto;
 	width: 100%;
 	display: none;
 	text-align: center;
@@ -549,4 +549,23 @@ a.social:hover {
 	line-height: 200px;
 	margin-top: 20px;
 	cursor: pointer;
+}
+.project p {
+	position: absolute;
+	width: 200px;
+}
+.project div {
+	border: 0;
+	border-radius: 200px;
+	opacity: 0.3;
+}
+.project div:hover {
+	opacity: 0;
+}
+.backTop {
+	position: absolute;
+	background: red;
+	height: 200px;
+	width: 100px;
+	bottom: 0;
 }

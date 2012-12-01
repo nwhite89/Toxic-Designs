@@ -65,8 +65,12 @@
                     var x = setInterval("slideshow()", 6000);
                     $('div.project').click(function () {
                         $('#project-view').show();
+                        $('div.backTop').show();
                         $('html, body').animate({scrollTop: $("#project-view").offset().top}, 1000);
-                    })
+                    });
+                    $('div.backTop').click(function() {
+                        $('html, body').animate({scrollTop: $("html").offset().top}, 1000);
+                    });
                 });
         </script>
     </body>
