@@ -64,6 +64,12 @@
                 jQuery(function($){
                     var x = setInterval("slideshow()", 6000);
                     $('div.project').click(function () {
+                        $.ajax({
+                            url: '/development/viewProject'
+                        }).done(function (data){
+                            console.log('done');
+                            $('#project-view').html(data);
+                        });
                         $('#project-view').show();
                         $('div.backTop').show();
                         $('html, body').animate(

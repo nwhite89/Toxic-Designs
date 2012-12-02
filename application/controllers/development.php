@@ -11,10 +11,19 @@ class Development extends CI_Controller
 			'title' => 'Development',
 		);
 		$data = array(
-			'projects' => 'project', 
+			'projects' => $this->development_model->projects(), 
 		);
 		$this->load->view('layouts/header', $header);
 		$this->load->view('development', $data);
 		$this->load->view('layouts/footer');
+	}
+
+	public function viewProject($pid = null)
+	{
+		$this->load->model('development_model');
+		$data = array (
+			'project' => $this->development_model->viewProject($pid),
+		);
+		$this->load->view('devProject');
 	}
 }
