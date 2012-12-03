@@ -65,7 +65,7 @@
                     var x = setInterval("slideshow()", 6000);
                     $('div.project').click(function () {
                         $.ajax({
-                            url: '/development/viewProject'
+                            url: '/development/viewProject/'
                         }).done(function (data){
                             console.log('done');
                             $('#project-view').html(data);
