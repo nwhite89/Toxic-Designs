@@ -30,10 +30,10 @@ class Development extends CI_Controller
 
 		}
 			*/
-		$this->load->model('development_model');
+		/*$this->load->model('development_model');
 		$data = array (
 			'project' => $this->development_model->viewProject($pid),
-		);
+		);*/
 		$this->load->view('devProject');
 	}
 }
