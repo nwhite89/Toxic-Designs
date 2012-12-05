@@ -20,20 +20,11 @@ class Development extends CI_Controller
 
 	public function viewProject($pid = null)
 	{
-		/*if($pid) {
-
-		if ($is_ajax() {
-			
-		})
-		} else {
-
-
-		}
-			*/
-		/*$this->load->model('development_model');
+		$this->load->model('development_model');
 		$data = array (
 			'project' => $this->development_model->viewProject($pid),
-		);*/
-		$this->load->view('devProject');
+		);
+		
+		$this->load->view('devProject', $data);
 	}
 }
