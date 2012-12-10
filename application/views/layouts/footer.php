@@ -99,7 +99,6 @@
                                     $('#project-view').hide();
                                 }
                         });
-
                     });
                 });
         </script>

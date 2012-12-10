@@ -29,10 +29,6 @@ class Development_model extends CI_Model
 		$this->db->where('id', $pid);
 		$query = $this->db->get('td_development');
 
-		print '<pre>';
-			print_r($query->result());
-		print '</pre>';
-
 		return $query;
 	}
 }
