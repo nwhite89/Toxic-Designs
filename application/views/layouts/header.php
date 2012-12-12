@@ -37,7 +37,7 @@
                                 <a class="home" href="<?php echo base_url(); ?>" title="Home">home</a>
                             </li>
                             <li class="labs">
-                                <a class="labs" href="#" title="Labs">labs</a>
+                                <a class="labs" href="<?php echo base_url(); ?>labs" title="Labs">labs</a>
                             </li>
                             <li class="development">
                                 <a class="development" href="<?php echo base_url(); ?>development" title="Development">development</a>
@@ -66,7 +66,7 @@
         <div class="container">
             <div class="sixteen columns header">
                 <h1>nick white</h1>
-                <h4><span>&lt;&#47;</span> front-end web developer <span>&gt;</span></h4>
+                <h4><span>&lt;&#47;</span> web developer <span>&gt;</span></h4>
             </div>
             <div class="sixteen columns navi">
                 <ul>
@@ -74,7 +74,7 @@
                         <a class="home" href="<?php echo base_url(); ?>" title="Home">home</a>
                     </li>
                     <li>
-                        <a class="labs" href="#" title="Labs">labs</a>
+                        <a class="labs" href="<?php echo base_url(); ?>labs" title="Labs">labs</a>
                     </li>
                     <li>
                         <a class="development" href="<?php echo base_url(); ?>development" title="Development">development</a>

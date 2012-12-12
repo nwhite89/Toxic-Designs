@@ -257,7 +257,7 @@ a.label:hover {
 }
 .box {
 	text-align: left;
-	background: whiteSmoke;
+	background: #F5F5F5;
 	margin-bottom: 10px;
 	border: 1px solid rgba(0, 0, 0, 0.15);
 	-webkit-border-radius: 4px;
@@ -275,6 +275,9 @@ a.label:hover {
 }
 .development .label {
 	background: #EE7E2A;
+}
+.labs .label {
+	background: #00AEC8;
 }
 .socialLabel {
 	margin-bottom: 10px;
@@ -573,12 +576,17 @@ a.social:hover {
 	height: auto;
 	max-width: 100%;
 }
+.development .project {
+	background: #EE7E2A;
+}
+.labs .project {
+	background: #00AEC8;
+}
 .project {
 	width: 200px;
 	height: 200px;
 	margin: auto;
 	border-radius: 200px;
-	background: #EE7E2A;
 	color: white;
 	text-align: center;
 	line-height: 200px;

@@ -3,9 +3,9 @@
 		foreach ($projects as $project)
 		{
 			echo "<div class=\"five columns\">";
-				echo "<div class=\"project\" rel=" . $project['id'] . ">";
-					echo "<p>" . $project['title'] . "</p>";
-					echo "<div style=\"background-image: url(" . base_url() . $project['thumbnail'] . ")\">&nbsp;</div>";
+				echo "<div class=\"project\" rel=" . $project->id . ">";
+					echo "<p>" . $project->title . "</p>";
+					echo "<div style=\"background-image: url(" . base_url() . $project->thumbnail . ")\">&nbsp;</div>";
 				echo "</div>";
 			echo "</div>";
 		}

@@ -15,8 +15,8 @@
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script-->
-        <script>
-        		$('#tweet3d li')
+        <script type="text/javascript">
+            $('#tweet3d li')
                 .bind({
                     "reposition": function() {
                         var degrees = $(this).data('roundabout').degrees,
@@ -31,7 +31,7 @@
                 })
                 .show()
                 ;
-                
+
                 $('#tweet3d ul').roundabout({
                     minScale: 0.7
                     ,   easing: 'easeOutElastic'
@@ -39,7 +39,7 @@
                     ,   autoplay: 4000
                     ,   autoplayDuration: 4000
                 });
-                
+
                 slideshow = function () {
                     var activeItem = $('#tweets').children('.active');
 
@@ -63,7 +63,7 @@
 
                 jQuery(function($){
                     var x = setInterval("slideshow()", 6000);
-                    $('div.project').click(function () {
+                    $('#projects div.project').click(function () {
                         var pid = $(this).attr('rel');
                         $.ajax({
                             url: '<?php echo base_url(); ?>development/viewProject/' + pid
@@ -75,7 +75,30 @@
                         $('div.backTop').show();
                         $('html, body').animate(
                             {
-                                scrollTop: $("#project-view").offset().top
+                                scrollTop: $("#project-view").offset().top - 10
+                            }, 
+                            {
+                                queue: false,
+                                duration: 1000,
+                                complete: function () {
+                                    $('div.backTop').show();
+                                }
+                            }
+                        );
+                    });
+                    $('#labs div.project').click(function () {
+                        var pid = $(this).attr('rel');
+                        $.ajax({
+                            url: '<?php echo base_url(); ?>labs/viewProject/' + pid
+                        }).done(function (data){
+                            console.log('done');
+                            $('#project-view').html(data);
+                        });
+                        $('#project-view').show();
+                        $('div.backTop').show();
+                        $('html, body').animate(
+                            {
+                                scrollTop: $("#project-view").offset().top - 10
                             }, 
                             {
                                 queue: false,
@@ -101,6 +124,6 @@
                         });
                     });
                 });
-        </script>
+</script>
     </body>
 </html>
