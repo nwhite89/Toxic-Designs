@@ -34,6 +34,32 @@ class Admin extends CI_Controller
 		}
 	}
 
+	public function development($pid = null) 
+	{
+		if($pid == null)
+		{
+
+		}
+		else 
+		{	
+			
+			$this->load->model('development_model');
+			$data = array (
+				'project' => $this->development_model->viewProject($pid),
+			);
+
+			$header = array(
+				'page' => 'admin',
+				'class' => 'development',
+				'title' => 'Admin',
+			);
+
+			$this->load->view('layouts/header', $header);
+			$this->load->view('admin/devForm', $data);
+			$this->load->view('layouts/footer');
+		}
+	}
+
 	private function loginForm() 
 	{
 		$this->load->view('admin/loginForm');
