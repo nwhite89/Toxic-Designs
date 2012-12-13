@@ -14,9 +14,9 @@
 | path to your installation.
 |
 */
-//$config['base_url']	= 'http://nickwhite.td/';
+$config['base_url']	= 'http://nickwhite.td/';
 //$config['base_url']	= 'http://192.168.0.13/ToxicDesigns/';
-$config['base_url']	= 'http://192.168.1.136/toxicd/';
+//$config['base_url']	= 'http://192.168.1.136/toxicd/';
 //$config['base_url']	= 'http://sandbox.dev/toxicd/';
 
 /*
@@ -227,7 +227,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'b920187af81df54d89c1fc598621c16f';
 
 /*
 |--------------------------------------------------------------------------

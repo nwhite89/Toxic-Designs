@@ -237,7 +237,7 @@ html {overflow-y: scroll;}
 	*/
 	margin-bottom: 10px;
 	padding: 6px 3% 5px 3%;
-	width: 90%;
+	width: 94%;
 	background: #000;
 	font-style: normal;
 	color: #fff;
@@ -651,4 +651,7 @@ a.social:hover {
 }
 .backTop p {
 	margin: 0 20px 0 0;
+}
+.half-width {
+	width: 50%;
 }
