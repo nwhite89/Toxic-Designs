@@ -549,6 +549,9 @@ a.social:hover {
 		padding: 10px 7% 10px 3%;
 		cursor: pointer;
 	}
+	.backTop {
+		margin-left: 0!important;
+	}
 }
 @media only screen and (max-width: 479px) {
 	.header h4 {
@@ -610,10 +613,10 @@ a.social:hover {
 .backTop {
 	position: fixed;
 	background: darkslategray;
-	height: 20px;
-	width: 145px;
-	left: -55px;
-	bottom: 63px;
+	height: 30px;
+	width: 185px;
+	margin-left: 10px;
+	bottom: 0;
 	display: none;
 	cursor: pointer;
 	color: white;
@@ -624,12 +627,8 @@ a.social:hover {
 	-moz-border-radius-bottomright: 4px;
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
-	transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg); /* IE 9 */
-	-webkit-transform: rotate(-90deg); /* Safari and Chrome */
-	-o-transform: rotate(-90deg); /* Opera */
-	-moz-transform: rotate(-90deg); /* Firefox */
 	z-index: 9999;
+	line-height: 30px;
 }
 .backTop p {
 	margin: 0 10px 0 0;
