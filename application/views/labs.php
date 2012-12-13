@@ -11,7 +11,7 @@
 		}
 	?>
 </div>
-<div class="backTop"><p>Back to Top &#187;</p></div>
+<div class="backTop"><p>Back to Top</p></div>
 </div>
 <div class="container">
 	<div id="project-view">
