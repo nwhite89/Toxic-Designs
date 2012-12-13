@@ -602,14 +602,35 @@ a.social:hover {
 .project p {
 	position: absolute;
 	width: 200px;
+	visibility: visible;
+	transition: visibility 0.5s;
+	-moz-transition: visibility 0.5s;
+	-webkit-transition: visibility 0.5s;
+	-o-transition: visibility 0.5s;
 }
 .project div {
 	border: 0;
 	border-radius: 200px;
 	opacity: 0.1;
+	visibility: show;
+	transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
 }
 .project div:hover {
-	opacity: 0;
+	opacity: 1;
+	transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-webkit-transition: opacity 1s;
+	-o-transition: opacity 1s;
+}
+.project:hover p {
+	visibility: hidden;
+	transition: visibility 0.2s;
+	-moz-transition: visibility 0.2s;
+	-webkit-transition: visibility 0.2s;
+	-o-transition: visibility 0.2s;
 }
 .backTop {
 	position: fixed;
