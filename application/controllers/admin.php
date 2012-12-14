@@ -10,15 +10,10 @@ class Admin extends CI_Controller
 			'title' => 'admin',
 		);
 		$this->load->view('layouts/header', $header);
-		if ($this->session->userdata('username') == 'nwhite89')
-		{
-
-		} 
-		else 
-		{
+		$this->session->sess_destroy();
+		if(!$this->adminCheck()) {
 			$this->loginForm();
 		}
-
 		$this->load->view('layouts/footer');
 	}
 
@@ -26,7 +21,11 @@ class Admin extends CI_Controller
 	{
 		if (($this->input->post('username') == 'nwhite89') && ($this->input->post('password') == 'manutd'))
 		{
-			
+			$userdata = array(
+				'username' => 'nwhite89'
+			);
+			$this->session->set_userdata($userdata);
+			$this->development();
 		}
 		else 
 		{
@@ -41,22 +40,27 @@ class Admin extends CI_Controller
 			'class' => 'development',
 			'title' => 'Admin',
 		);
-		$this->load->view('layouts/header', $header);
-		if($pid == null)
-		{
-			$this->load->view('admin/devForm');
-		}
-		else 
-		{	
-			
-			$this->load->model('development_model');
-			$data = array (
-				'project' => $this->development_model->viewProject($pid),
-			);
+		if($this->adminCheck()) {
+			$this->load->view('layouts/header', $header);
+			if($pid == null)
+			{
+				$this->load->view('admin/devForm');
+			}
+			else 
+			{	
+				
+				$this->load->model('development_model');
+				$data = array (
+					'project' => $this->development_model->viewProject($pid),
+				);
 
-			$this->load->view('admin/devForm', $data);
-		}
+				$this->load->view('admin/devForm', $data);
+			}
 			$this->load->view('layouts/footer');
+		}
+		else {
+			$this->index();
+		}
 	}
 
 	private function loginForm() 
@@ -74,5 +78,17 @@ class Admin extends CI_Controller
 	{
 		$this->db->insert('td_development', $this->input->post());
 		$this->development($this->db->insert_id());
+	}
+
+	private function adminCheck()
+	{
+		if ($this->session->userdata('username') == 'nwhite89')
+		{
+			return true;
+		} 
+		else 
+		{
+			return false;
+		}
 	}
 }
