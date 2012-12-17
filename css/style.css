@@ -259,7 +259,7 @@ a.label:hover {
 .box {
 	text-align: left;
 	background: #F5F5F5;
-	margin-bottom: 40px;
+	margin-bottom: 40px!important;
 	border: 1px solid rgba(0, 0, 0, 0.15);
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -279,6 +279,12 @@ a.label:hover {
 }
 .labs .label {
 	background: #00AEC8;
+}
+.blog .label {
+	background: #E64141;
+}
+.blog .label.full-width {
+	text-align: center;
 }
 .socialLabel {
 	margin-bottom: 10px;
@@ -657,4 +663,7 @@ a.social:hover {
 }
 .full-width {
 	width: 98%;
+}
+.fl {
+	float: left;
 }

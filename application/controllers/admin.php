@@ -10,7 +10,6 @@ class Admin extends CI_Controller
 			'title' => 'admin',
 		);
 		$this->load->view('layouts/header', $header);
-		$this->session->sess_destroy();
 		if(!$this->adminCheck()) {
 			$this->loginForm();
 		}
@@ -79,6 +78,55 @@ class Admin extends CI_Controller
 		$this->db->insert('td_development', $this->input->post());
 		$this->development($this->db->insert_id());
 	}
+
+	public function newBlogPost()
+	{
+		$header = array(
+			'page' => 'admin',
+			'class' => 'blog',
+			'title' => 'Admin',
+		);
+		$this->load->view('layouts/header', $header);
+		$this->load->view('admin/blogNewForm');
+		$this->load->view('layouts/footer');
+	}
+
+	public function updateBlogPost($bid = null)
+	{
+		if ($bid == null) {
+			$this->newBlogPost();
+		} else {
+			$header = array(
+				'page' => 'admin',
+				'class' => 'blog',
+				'title' => 'Update Blog post',
+			);
+			$array = array('id'=>$bid);
+			$this->db->where($array);
+			$query = $this->db->get('td_blog_posts');
+			$data = array( 
+				'post' => $query,
+			);
+			$this->load->view('layouts/header', $header);
+			$this->load->view('admin/blogNewForm', $data);
+			$this->load->view('layouts/footer');
+		}
+	}
+
+	public function blogPostSubmit()
+	{
+		if($this->input->post('id')) {
+			$array = array('id'=>$this->input->post('id'));
+			$this->db->where($array);
+			$this->db->update('td_blog_posts', $this->input->post());
+			redirect('/blog/posts/'.$this->input->post('id'));
+		} else {
+			$this->db->insert('td_blog_posts', $this->input->post());
+			redirect('/blog/posts/'.$this->db->insert_id());
+		}
+	}
+
+
 
 	private function adminCheck()
 	{

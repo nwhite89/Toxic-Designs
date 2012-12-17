@@ -43,7 +43,7 @@
                                 <a class="development" href="<?php echo base_url(); ?>development" title="Development">development</a>
                             </li>
                             <li class="blog">
-                                <a class="blog" href="#" title="Blog">blog</a>
+                                <a class="blog" href="<?php echo base_url(); ?>blog" title="Blog">blog</a>
                             </li>
                             <li class="about-me">
                                 <a class="about-me" href="<?php echo base_url(); ?>about-me" title="About me">about me</a>
@@ -80,7 +80,7 @@
                         <a class="development" href="<?php echo base_url(); ?>development" title="Development">development</a>
                     </li>
                     <li>
-                        <a class="blog" href="#" title="Blog">blog</a>
+                        <a class="blog" href="<?php echo base_url(); ?>blog" title="Blog">blog</a>
                     </li>
                     <li>
                         <a class="about-me" href="<?php echo base_url(); ?>about-me" title="About Me">about me</a>
