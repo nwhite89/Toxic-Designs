@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 13, 2012 at 01:31 PM
+-- Generation Time: Dec 17, 2012 at 04:45 PM
 -- Server version: 5.5.24
--- PHP Version: 5.3.10-1ubuntu3.2
+-- PHP Version: 5.3.10-1ubuntu3.4
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -72,6 +72,57 @@ INSERT INTO `td_about_social` (`id`, `label`, `username`, `url`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `td_blog_posts`
+--
+
+DROP TABLE IF EXISTS `td_blog_posts`;
+CREATE TABLE IF NOT EXISTS `td_blog_posts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `blog_title` varchar(255) NOT NULL,
+  `blog_post` text NOT NULL,
+  `blog_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `td_blog_posts`
+--
+
+INSERT INTO `td_blog_posts` (`id`, `blog_title`, `blog_post`, `blog_date`) VALUES
+(1, 'To be native, or to be web that is the question', 'We all know that there is a complete massive boom in the creation of applications over recent years (and still growing). But is it really necessarily the best option to build a native application?<br /><br />\nIt all depends on your business, your application and your aim of the app.<br /><br />\nDo you already have a mobile web version?<br />\nIs it possible to create all the functionalities of your app with HTML5?<br />\nIs it possible to have a web and native app with further functionality in the native?<br /><br />\nPersonally I believe that it is much more worthwhile for a company to create a web application using some soft of framework such as jQuery Mobile or Sencha Touch 2. Using Sencha Touch 2 will allow developers to create one application and "wrap the application" (so to speak) creating a native application for iPhone, Android and Blackberry. jQuery Mobile can do this too when incorporating the application with Adobe''s PhoneGap.<br /><br />\nSo why not at least initially create an application using PhoneGap allowing your application to be hosted on the web, while also being packaged for every operating system rather than shedding out lots of cash to incorporate your app on all of them, or close your market before you have already started providing the application to only one OS?<br /><br />\nSo what is your take on the native vs web app world?', '2012-12-17 11:27:14');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `td_categories`
+--
+
+DROP TABLE IF EXISTS `td_categories`;
+CREATE TABLE IF NOT EXISTS `td_categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+--
+-- Dumping data for table `td_categories`
+--
+
+INSERT INTO `td_categories` (`id`, `title`) VALUES
+(1, 'jQuery'),
+(2, 'PHP'),
+(3, 'JavaScript'),
+(4, 'NodeJS'),
+(5, 'Dissertation'),
+(6, 'PhoneGap'),
+(7, 'Portfolio'),
+(8, 'Tutorials'),
+(9, 'XSL'),
+(10, 'General News');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `td_development`
 --
 
@@ -92,7 +143,7 @@ CREATE TABLE IF NOT EXISTS `td_development` (
 --
 
 INSERT INTO `td_development` (`id`, `title`, `thumbnail`, `image`, `date`, `text`, `url`) VALUES
-(1, 'Mobile London Nodejs', '/img/projects/thumbnails/mobilelondon.png', '/img/projects/mobilelondon.png', '2012-12-13 09:21:06', 'I worked on this project as my Dissertation finishing with a First for the project. Using Node.js, Express, HTML5, jQuery \r\nand jQuery Mobile. The aim of this web application is to provide users travelling around London via public transport, easy\r\naccess to up-to-date information provided by TFL on all mobile devices.<br /><br />\r\n\r\nThis web application has been created to work on all mobile devices supporting HTML5 (whilst being optimised for iOS).', 'http://www.mobilelondon.org'),
+(1, 'Mobile London Nodejs', '/img/projects/thumbnails/mobilelondon.png', '/img/projects/mobilelondon.png', '2012-12-13 09:21:06', 'I worked on this project as my Dissertation finishing with a First for the project. Using Node.js, Express, HTML5, jQuery \nand jQuery Mobile. The aim of this web application is to provide users travelling around London via public transport, easy\naccess to up-to-date information provided by TFL on all mobile devices.<br /><br />\n\nThis web application has been created to work on all mobile devices supporting HTML5 (whilst being optimised for iOS).', 'http://www.mobilelondon.org'),
 (2, 'I Am Ethicon', '/img/projects/thumbnails/IamEthiconAwards.png', '/img/projects/IamEthiconAwards.png', '2012-12-03 09:21:06', 'This was an employee engagement campaign for the european section of Ethicon. It was later heralded as "the" way to bring employees together and considered the benchmark by the company.', ''),
 (3, 'Learning Journey', '/img/projects/thumbnails/learningjourney.png', '/img/projects/learningjourney.png', '2012-12-04 13:16:30', 'This extranet site', 'http://mylearningjourney.acuvue.co.uk/');
 
@@ -148,6 +199,20 @@ CREATE TABLE IF NOT EXISTS `td_lab` (
 
 INSERT INTO `td_lab` (`id`, `title`, `thumbnail`, `image`, `date`, `text`, `url`) VALUES
 (1, 'Mobile London Nodejs', '/img/projects/thumbnails/mobilelondon.png', '/img/projects/mobilelondon.png', '2012-12-13 09:21:20', 'I worked on this project as my Dissertation finishing with a First for the project. Using Node.js, Express, HTML5, jQuery \r\nand jQuery Mobile. The aim of this web application is to provide users travelling around London via public transport, easy\r\naccess to up-to-date information provided by TFL on all mobile devices.<br /><br />\r\n\r\nThis web application has been created to work on all mobile devices supporting HTML5 (whilst being optimised for iOS).', 'http://www.mobilelondon.org');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `td_post_category`
+--
+
+DROP TABLE IF EXISTS `td_post_category`;
+CREATE TABLE IF NOT EXISTS `td_post_category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_id` int(11) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
