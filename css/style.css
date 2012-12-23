@@ -428,7 +428,7 @@ a.social:hover {
 	float: left;
 }
 .blog-posts {
-	margin-bottom: 20px;
+	margin-top: 20px;
 }
 .blog-posts .text {
 	width: 85%;
@@ -440,6 +440,7 @@ a.social:hover {
 	letter-spacing: -1px;
 	color: #E64141;
 	text-decoration: none;
+	line-height: 20px;
 }
 .blog-title a:hover {
 	text-decoration: underline;
