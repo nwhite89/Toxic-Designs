@@ -4,13 +4,17 @@ class Blog extends CI_Controller
 {
 	public function index()
 	{
+		$this->load->model('blog_model');
 		$header = array(
 			'page' => 'blog',
 			'class' => 'blog',
 			'title' => 'Blog',
 		);
+		$data = array(
+			'post' => $this->blog_model->fetchBlogPost(),
+		);
 		$this->load->view('layouts/header', $header);
-		$this->load->view('blog');
+		$this->load->view('blog', $data);
 		$this->load->view('layouts/footer');
 	}
 	public function posts($bid = null)
