@@ -11,7 +11,7 @@ class Blog extends CI_Controller
 			'title' => 'Blog',
 		);
 		$data = array(
-			'post' => $this->blog_model->fetchBlogPost(),
+			'posts' => $this->blog_model->fetchBlogPost(),
 		);
 		$this->load->view('layouts/header', $header);
 		$this->load->view('blog', $data);

@@ -1,30 +1,46 @@
 <div id="blog" class="sixteen columns">
 	<?php
-	foreach ($post as $key => $value) {
+	foreach ($posts as $post) {
+		$postDate = strtotime($post->blog_date);
 	?>
-		<div class="clearfix">
+		<div class="clearfix blog-posts">
 			<div class="cal-container fl">
 				<div class="cal-icon-mon">
-
-				</div>
-				<div class="cal-icon-day">12</div>
-				<div class="fl">
 					<?php
-						echo $key;
+						echo date('M', $postDate);
 					?>
 				</div>
+				<div class="cal-icon-day">
+					<?php
+						echo date('d', $postDate);
+					?>
+				</div>
+			</div>
+			<div class="fl text">
+				<p class="blog-title">
+					<a href="<?php echo base_url(); ?>blog/posts/<?php echo $post->id; ?>" title="<?php echo $post->blog_title; ?>">
+						<?php
+							echo $post->blog_title;
+						?>
+					</a>
+				</p>
+				<p class="blog-desc">
+					<?php
+						if (strlen($post->blog_post) > 255) {
+							echo substr($post->blog_post, 0, 255) . '.....';
+							?>
+							 <a class="readmore" href="<?php echo base_url(); ?>blog/posts/<?php echo $post->id; ?>" title="<?php echo $post->blog_title; ?>">
+							 	Read more &raquo;
+							 </a>
+							<?php
+						} else {
+							echo $post->blog_post;
+						}
+					?>
+				</p>
 			</div>
 		</div>
 	<?php
 	}
 	?>
-	<div class="clearfix">
-		<div class="cal-container fl">
-			<div class="cal-icon-mon">
-				APR
-			</div>
-			<div class="cal-icon-day">12</div>
-		</div>
-		<div class="fl">This is the title of the post</div>
-	</div>
 </div>

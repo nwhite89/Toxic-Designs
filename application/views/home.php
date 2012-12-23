@@ -26,8 +26,11 @@
                 <div id="tweet3d">
                     <ul>
                         <?php
+                            $y = 0;
                             foreach ($tweets as $tweet) 
                             {
+                                $y++;
+                                if ($y < 7) {
                                 ?>
                                 <li>
                                     <p class="hashtag">
@@ -42,6 +45,7 @@
                                     </p>
                                 </li>
                                 <?php
+                                }
                                 }
                             ?>
                     </ul>
