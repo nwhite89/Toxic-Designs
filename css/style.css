@@ -433,6 +433,9 @@ a.social:hover {
 .blog-posts .text {
 	width: 85%;
 }
+.home .blog-posts .text {
+	width: 80%;
+}
 .blog-title a {
 	font-family: Helvetica;
 	font-weight: 400;
@@ -716,6 +719,9 @@ a.social:hover {
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	.instagram-photos .photo:nth-child(9) {
 		display: none;
+	}
+	.home .blog-posts .text {
+		width: 74%;
 	}
 }
 @media only screen and (max-width: 767px) {

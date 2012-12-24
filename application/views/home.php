@@ -65,8 +65,36 @@
                 </ul>
             </div>
             <div class="one-third column">
-                <h3>Docs &amp; Support</h3>
-                <p>The easiest way to really get started with Skeleton is to check out the full docs and info at <a href="http://www.getskeleton.com" title="I love weener - ooorah!">www.getskeleton.com.</a>. Skeleton is also open-source and has a <a href="https://github.com/dhgamache/skeleton">project on git</a>, so check that out if you want to report bugs or create a pull request. If you have any questions, thoughts, concerns or feedback, please don't hesitate to email me at <a href="mailto:hi@getskeleton.com">hi@getskeleton.com</a>.</p>
+                <?php
+                foreach ($posts as $post) {
+                    $postDate = strtotime($post->blog_date);
+                    ?>
+                    <div class="clearfix blog-posts">
+                        <div class="cal-container fl">
+                            <div class="cal-icon-mon">
+                                <?php
+                                    echo date('M', $postDate);
+                                ?>
+                            </div>
+                            <div class="cal-icon-day">
+                                <?php
+                                    echo date('d', $postDate);
+                                ?>
+                            </div>
+                        </div>
+                        <div class="fl text">
+                            <p class="blog-title">
+                                <a href="<?php echo base_url(); ?>blog/posts/<?php echo $post->id; ?>" title="<?php echo $post->blog_title; ?>">
+                                    <?php
+                                        echo $post->blog_title;
+                                    ?>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                <?php
+                }
+                ?>
             </div>
 
         </div><!-- container -->
