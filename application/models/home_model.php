@@ -36,9 +36,6 @@
 			$hash = array('nodejs', 'php', 'html5', 'jquery', 'javascript');
 			
 			// Loop through the hashtag array and return the array
-			/*foreach ($hash as $tag) {
-				$this->getTweets($tag);
-			}*/
 			$query = $this->db->query('SELECT * FROM td_tweet_cache ORDER BY RAND() LIMIT 15');
 
 			foreach ($query->result() as $row)

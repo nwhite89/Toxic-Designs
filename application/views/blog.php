@@ -1,4 +1,5 @@
 <div id="blog" class="sixteen columns">
+	<p class="pagination"><?php echo $links; ?></p>
 	<?php
 	foreach ($posts as $post) {
 		$postDate = strtotime($post->blog_date);
@@ -43,4 +44,5 @@
 	<?php
 	}
 	?>
+	<p class="pagination"><?php echo $links; ?></p>
 </div>

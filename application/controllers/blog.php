@@ -2,6 +2,16 @@
 
 class Blog extends CI_Controller
 {
+	public function __construct()
+	{
+		parent:: __construct();
+		$this->load->helper('url');
+		$this->load->library('pagination');
+	}
+	public function page ()
+	{
+		$this->index();
+	}
 	public function index()
 	{
 		$this->load->model('blog_model');
@@ -10,9 +20,24 @@ class Blog extends CI_Controller
 			'class' => 'blog',
 			'title' => 'Blog',
 		);
-		$data = array(
-			'posts' => $this->blog_model->fetchBlogPost(),
+		
+
+		// Create pagination of blog posts
+		$config = array();
+		$config['base_url'] = base_url() . 'blog/page/';
+		$config['total_rows'] = $this->blog_model->record_count();
+		$config['per_page'] = 5;
+		$config['uri_segment'] = 3;
+		$choice = $config["total_rows"] / $config["per_page"];
+		$config['num_links'] = round($choice);
+		$this->pagination->initialize($config);
+		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
+        $data = array(
+			'posts' => $this->blog_model->getBlogPosts($config["per_page"], $page),
+			'links' => $this->pagination->create_links(),
 		);
+
 		$this->load->view('layouts/header', $header);
 		$this->load->view('blog', $data);
 		$this->load->view('layouts/footer');
