@@ -68,7 +68,6 @@
                         $.ajax({
                             url: '<?php echo base_url(); ?>index.php/development/viewProject/' + pid
                         }).done(function (data){
-                            console.log('done');
                             $('#project-view').html(data);
                         });
                         $('#project-view').show();
