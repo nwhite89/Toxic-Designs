@@ -94,6 +94,7 @@ a:hover { text-decoration: underline!important; }
 #tweet3d li p {
 	margin-left: 2em;
 	margin-right: 2em;
+	word-break: break-all;
 }
 #tweet3d li p.hashtag {
 	margin-top: 2em;
@@ -496,6 +497,15 @@ a.social:hover {
 .readmore:hover {
 	text-decoration: underline;
 }
+h3.blog {
+	border-bottom: 5px solid #E64141;
+}
+h3.development {
+	border-bottom: 5px solid #ee7e2a;
+}
+#home-projects .inactive {
+	display: none;
+}
 /* Navigation for Tablet and Desktop */
 @media only screen and (min-width: 768px) {
 	#tweets {
@@ -526,6 +536,9 @@ a.social:hover {
 	}
 	.socialicons .icon.github {
 		background: url(../img/icons/github.png) no-repeat;
+	}
+	.socialicons .icon.instagram {
+		background: url(../img/icons/instagram.png) no-repeat;
 	}
 	.socialicons .icon > a {
 		display: block;

@@ -36,9 +36,9 @@
                             <li class="home">
                                 <a class="home" href="<?php echo base_url(); ?>" title="Home">home</a>
                             </li>
-                            <li class="labs">
+                            <!--li class="labs">
                                 <a class="labs" href="<?php echo base_url(); ?>labs" title="Labs">labs</a>
-                            </li>
+                            </li-->
                             <li class="development">
                                 <a class="development" href="<?php echo base_url(); ?>development" title="Development">development</a>
                             </li>
@@ -56,10 +56,11 @@
         <div id="header-bar">
             <div class="container clearfix">
                 <div class="socialicons sixteen columns">
-                    <span class="icon twi"><a href="https://twitter.com/intent/user?screen_name=toxicd89"></a></span>
-                    <span class="icon linki"></span>
-                    <span class="icon fb"></span>
-                    <span class="icon github"></span>
+                    <span class="icon twi"><a href="http://bit.ly/13ei1v6"></a></span>
+                    <span class="icon linki"><a href="http://linkd.in/UROMvc"></a></span>
+                    <span class="icon fb"><a href="http://on.fb.me/ZhRppb"></a></span>
+                    <span class="icon github"><a href="http://bit.ly/XfgtO2"></a></span>
+                    <span class="icon instagram"><a href="http://bit.ly/UwqrZd"></a></span>
                 </div>
             </div>
         </div>
@@ -73,9 +74,9 @@
                     <li>
                         <a class="home" href="<?php echo base_url(); ?>" title="Home">home</a>
                     </li>
-                    <li>
+                    <!--li>
                         <a class="labs" href="<?php echo base_url(); ?>labs" title="Labs">labs</a>
-                    </li>
+                    </li-->
                     <li>
                         <a class="development" href="<?php echo base_url(); ?>development" title="Development">development</a>
                     </li>
