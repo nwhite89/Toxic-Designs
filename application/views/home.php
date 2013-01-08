@@ -51,35 +51,6 @@
                     </ul>
                 </div>
             </div>
-            <div class="one-third column development" id="home-projects">
-                <h3 class="development">Development</h3>
-                <?php
-                    $x=0;
-                    foreach ($devprojects as $project)
-                    {
-                        $x++;
-                        if ($x < 4) {
-                            echo "<div class=\"five columns";
-                            if ($x == 1) { echo " active"; } 
-                            echo "\">";
-                                echo "<div class=\"project\" rel=" . $project->id . ">";
-                                    echo "<p>" . $project->title . "</p>";
-                                    echo "<div style=\"background-image: url(" . base_url() . $project->thumbnail . ")\">&nbsp;</div>";
-                                echo "</div>";
-                            echo "</div>";
-                        }
-                    }
-                ?>
-            </div>
-            <div class="one-third column">
-                <h3>Three Core Principles</h3>
-                <p>Skeleton is built on three core principles:</p>
-                <ul class="square">
-                    <li><strong>A Responsive Grid Down To Mobile</strong>: Elegant scaling from a browser to tablets to mobile.</li>
-                    <li><strong>Fast to Start</strong>: It's a tool for rapid development with best practices</li>
-                    <li><strong>Style Agnostic</strong>: It provides the most basic, beautiful styles, but is meant to be overwritten.</li>
-                </ul>
-            </div>
             <div class="one-third column">
                 <h3 class="blog">Blog</h3>
                 <?php
@@ -111,6 +82,36 @@
                     </div>
                 <?php
                 }
+                ?>
+            </div>
+            <div class="one-third column">
+                <h3 class="about-me">Skills</h3>
+                <?php
+                    foreach ($skills as $value) {
+                        echo $value->content;
+                    }
+                ?>
+            </div>
+            <div class="one-third column development" id="home-projects">
+                <h3 class="development">Development</h3>
+                <?php
+                    $x=0;
+                    foreach ($devprojects as $project)
+                    {
+                        $x++;
+                        if ($x < 4) {
+                            echo "<div class=\"projects five columns";
+                            if ($x == 1) { echo " active"; } 
+                            echo "\">";
+                                echo "<a href='" . base_url() . "development'>";
+                                    echo "<div class=\"project\">";
+                                        echo "<p>" . $project->title . "</p>";
+                                        echo "<div style=\"background-image: url(" . base_url() . $project->thumbnail . ")\">&nbsp;</div>";
+                                    echo "</div>";
+                                echo "</a>";
+                            echo "</div>";
+                        }
+                    }
                 ?>
             </div>
 

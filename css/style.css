@@ -503,8 +503,23 @@ h3.blog {
 h3.development {
 	border-bottom: 5px solid #ee7e2a;
 }
+h3.about-me {
+	border-bottom: 5px solid #81519C;
+}
+.home .codeSkills li {
+	width: 135px;
+	font-size: 1em;
+}
 #home-projects .inactive {
 	display: none;
+}
+#home-projects .projects {
+	display: none;
+	opacity: 0;
+}
+
+#home-projects .projects.active {
+	display: block;
 }
 /* Navigation for Tablet and Desktop */
 @media only screen and (min-width: 768px) {
@@ -728,6 +743,10 @@ h3.development {
 	.instagram-photos .photo:nth-child(9) {
 		display: none;
 	}
+	.home .codeSkills li {	
+		width: 129px;
+		font-size: 1em;
+	}
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	.instagram-photos .photo:nth-child(9) {
@@ -735,6 +754,10 @@ h3.development {
 	}
 	.home .blog-posts .text {
 		width: 74%;
+	}
+	.home .codeSkills li {	
+		width: 103px;
+		font-size: 0.9em;
 	}
 }
 @media only screen and (max-width: 767px) {
