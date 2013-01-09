@@ -18,7 +18,7 @@ $config['base_url']	= 'http://nickwhite.td/';
 //$config['base_url']	= 'http://192.168.0.18/ToxicDesigns/';
 //$config['base_url']	= 'http://192.168.1.136/toxicd/';
 //$config['base_url']	= 'http://sandbox.dev/toxicd/';
-
+//$config['base_url'] = 'http://www.toxicd.co.uk';
 /*
 |--------------------------------------------------------------------------
 | Index File
