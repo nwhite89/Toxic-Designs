@@ -52,8 +52,9 @@
 			}
 		}
 
-		public function content ()
+		public function content ($id = null)
 		{
+			if ($id != null) { $this->db->where('id', $id); }
 			$query = $this->db->get('td_about_content');
 			if ($query->num_rows() > 0)
 			{  

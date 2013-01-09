@@ -5,6 +5,8 @@ class Home extends CI_Controller {
 	{
 		$this->load->model('home_model');
 		$this->load->model('blog_model');
+		$this->load->model('development_model');
+		$this->load->model('about_model');
 		$header = array(
 			'page' => 'home',
 			'class' => 'home',
@@ -14,6 +16,8 @@ class Home extends CI_Controller {
 			'page'=>'home',
 			'tweets'=>$this->home_model->tweets(),
 			'posts' => $this->blog_model->fetchBlogPost('home'), 
+			'devprojects' => $this->development_model->projects(),
+			'skills' => $this->about_model->content(2),
 		);
 		$this->load->view('layouts/header', $header);
 		$this->load->view('home', $data);
