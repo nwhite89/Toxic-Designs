@@ -15,6 +15,6 @@
 </div>
 <div class="container">
 	<div id="project-view">
-	
+		<img src="<?php echo base_url(); ?>img/ajax-loader.gif" />
 	</div>
 </div>

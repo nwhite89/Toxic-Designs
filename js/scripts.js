@@ -75,7 +75,6 @@
                     var y = setInterval("developmentProjects()", 6000);
                     $('#home-projects .active').css('opacity', 1);
                     $('#projects div.project').click(function () {
-                        $('#project-view').html('<img src="'+base_url+'/img/ajax-loader.gif" />')
                         var pid = $(this).attr('rel');
                         $.ajax({
                             url: base_url + 'index.php/development/viewProject/' + pid
@@ -98,7 +97,6 @@
                         );
                     });
                     $('#labs div.project').click(function () {
-                        $('#project-view').html('<img src="'+base_url+'/img/ajax-loader.gif" />')
                         var pid = $(this).attr('rel');
                         $.ajax({
                             url: base_url + 'labs/viewProject/' + pid
@@ -122,6 +120,7 @@
                         );
                     });
                     $('div.backTop').click(function() {
+                        $('#project-view').html('<img src="'+base_url+'/img/ajax-loader.gif" />');
                         $('html, body').animate(
                             {
                                 scrollTop: $("html").offset().top
