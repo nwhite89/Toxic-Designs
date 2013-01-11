@@ -120,7 +120,6 @@
                         );
                     });
                     $('div.backTop').click(function() {
-                        $('#project-view').html('<img src="'+base_url+'/img/ajax-loader.gif" />');
                         $('html, body').animate(
                             {
                                 scrollTop: $("html").offset().top
@@ -131,6 +130,7 @@
                                 complete: function () {
                                     $('div.backTop').hide();;
                                     $('#project-view').hide();
+                                    $('#project-view').html('<img src="'+base_url+'/img/ajax-loader.gif" />');
                                 }
                         });
                     });

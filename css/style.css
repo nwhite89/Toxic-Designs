@@ -336,6 +336,9 @@ a.social:hover {
 	background: url(../img/tick.png) #81519C no-repeat 5px 5px;
 	margin-right: 5px;
 }
+#projects {
+	margin-bottom: 20px;
+}
 #project-view {
 	margin-top: 800px;
 	height: auto;
