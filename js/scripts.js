@@ -74,7 +74,7 @@
                     $('#projects div.project').click(function () {
                         var pid = $(this).attr('rel');
                         $.ajax({
-                            url: '<?php echo base_url(); ?>index.php/development/viewProject/' + pid
+                            url: base_url + 'index.php/development/viewProject/' + pid
                         }).done(function (data){
                             $('#project-view').html(data);
                         });
@@ -96,7 +96,7 @@
                     $('#labs div.project').click(function () {
                         var pid = $(this).attr('rel');
                         $.ajax({
-                            url: '<?php echo base_url(); ?>labs/viewProject/' + pid
+                            url: base_url + 'labs/viewProject/' + pid
                         }).done(function (data){
                             console.log('done');
                             $('#project-view').html(data);

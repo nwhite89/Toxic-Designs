@@ -21,6 +21,9 @@
         <link rel="stylesheet" href="css/ie8.css">
         <!--<![endif]-->
         <script src="<?php echo base_url(); ?>js/vendor/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript">
+            var base_url = <?php echo "'".base_url()."'"; ?>;
+        </script>
     </head>
     <body class="<?php echo $class; ?>">
         <div class="navbar navbar-inverse">
