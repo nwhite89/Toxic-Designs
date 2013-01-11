@@ -521,6 +521,10 @@ h3.about-me {
 #home-projects .projects.active {
 	display: block;
 }
+p.pagination {
+	letter-spacing: 5px;
+	font-size: 1.2em;
+}
 /* Navigation for Tablet and Desktop */
 @media only screen and (min-width: 768px) {
 	#tweets {
