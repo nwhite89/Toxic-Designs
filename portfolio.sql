@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 28, 2012 at 04:29 PM
+-- Generation Time: Jan 11, 2013 at 09:47 PM
 -- Server version: 5.5.24
 -- PHP Version: 5.3.10-1ubuntu3.4
 
@@ -57,17 +57,18 @@ CREATE TABLE IF NOT EXISTS `td_about_social` (
   `username` varchar(255) NOT NULL,
   `url` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `td_about_social`
 --
 
 INSERT INTO `td_about_social` (`id`, `label`, `username`, `url`) VALUES
-(1, 'twitter', '@ToxicD89', 'http://twitter.com/toxicd89'),
-(2, 'Github', 'nwhite89', 'https://github.com/nwhite89'),
-(3, 'linkedin', 'Nick White', 'http://www.linkedin.com/profile/view?id=156575662'),
-(4, 'instagram', 'nwhite89', 'http://instagram.com/nwhite89');
+(1, 'twitter', '@ToxicD89', 'http://bit.ly/13ei1v6'),
+(2, 'Github', 'nwhite89', 'http://bit.ly/XfgtO2'),
+(3, 'linkedin', 'Nick White', 'http://linkd.in/UROMvc'),
+(4, 'instagram', 'nwhite89', 'http://bit.ly/UwqrZd'),
+(5, 'Facebook', 'ToxicD', 'http://on.fb.me/ZhRppb');
 
 -- --------------------------------------------------------
 
@@ -142,16 +143,17 @@ CREATE TABLE IF NOT EXISTS `td_development` (
   `text` text NOT NULL,
   `url` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `td_development`
 --
 
 INSERT INTO `td_development` (`id`, `title`, `thumbnail`, `image`, `date`, `text`, `url`) VALUES
-(1, 'Mobile London Nodejs', '/img/projects/thumbnails/mobilelondon.png', '/img/projects/mobilelondon.png', '2012-12-13 09:21:06', 'I worked on this project as my Dissertation finishing with a First for the project. Using Node.js, Express, HTML5, jQuery \nand jQuery Mobile. The aim of this web application is to provide users travelling around London via public transport, easy\naccess to up-to-date information provided by TFL on all mobile devices.<br /><br />\n\nThis web application has been created to work on all mobile devices supporting HTML5 (whilst being optimised for iOS).', 'http://www.mobilelondon.org'),
-(2, 'I Am Ethicon', '/img/projects/thumbnails/IamEthiconAwards.png', '/img/projects/IamEthiconAwards.png', '2012-12-03 09:21:06', 'This was an employee engagement campaign for the european section of Ethicon. It was later heralded as "the" way to bring employees together and considered the benchmark by the company.', ''),
-(3, 'Learning Journey', '/img/projects/thumbnails/learningjourney.png', '/img/projects/learningjourney.png', '2012-12-04 13:16:30', 'This extranet site', 'http://mylearningjourney.acuvue.co.uk/');
+(1, 'Mobile London Nodejs', '/img/projects/thumbnails/mobilelondon.png', '/img/projects/mobilelondon.png', '2012-12-13 09:21:06', 'This project was completed for my dissertation which I recieved a first. Mobile London was created with <a href="http://nodejs.org/" target="_blank" title="Node.js">Node.js</a>, <a href="http://expressjs.com/" target="_blank" title="Expressjs">Express</a>, HTML5, <a href="http://jquery.com/" title="jQuery" target="_blank">jQuery</a> and <a href="http://jquerymobile.com/" target="_blank" title="jQuery Mobile">jQuery Mobile</a>; which provides users \neasy access to information provided by Transport For London (TFL) while travelling around London via public transport whilst using a smartphone or tablet device.\n<br /><br />\nThe web application was created to work on all mobile devices which support HTML5 however, optimised for iOS.', 'http://www.mobilelondon.org'),
+(2, 'I Am Ethicon', '/img/projects/thumbnails/IamEthiconAwards.png', '/img/projects/IamEthiconAwards.png', '2012-12-03 09:21:06', 'This was an employee engagement campaign for the European section of Ethicon. It was later heralded as "the" way to bring employees together and considered a benchmark initiative within the company. \n<br /><br />\nThis site was built on SharePoint 2007 publishing platform. Despite this limitation, the aim was to make this feel more like a web application. In order to meet this, I implemented jQuery and AJAX and a jQuery plugin, SPServices. This plugin allowed for a lot of customisation linking, custom lists, with columns allowing users to like and comment on nominations.\n<br /><br />\nMy work on this SharePoint application took place whilst on work experience placement at Content Formula. My role on this project was to check wireframes matched the requirements, and to ensure that what was proposed was feasible using the plugin as well as lead the overall project build. I produced the functional specifications for how to build the system. Following this, I led the development effort, building all of the functionality on the SharePoint front-end.', ''),
+(3, 'Learning Journey', '/img/projects/thumbnails/learningjourney.png', '/img/projects/learningjourney.png', '2012-12-04 13:16:30', 'The aim of this project was to provide employees within Vision Care (J&J) access to downloadable materials and planning functionality to track their development in their role. Vision Care provide new employees with documents and a schedule of meetings and courses, with information about when they should be completed during their entire induction. Once their induction is completed they should be allowed, allowing ongoing training (the same as existing employees). \n<br /><br />\nManagers of the learners use the tool to oversee the development of their reports with a view of learners'' progress of inductions and ongoing training sections. \n<br /><br />\nThis project was created using the Yii framework for PHP. My role on this project was Development Lead. In this capacity I worked on the IA/Requirement gathering, working with the wireframers to ensure that the final product met the main requirements and objectives of the project. \n<br /><br />\nI also worked on build of the project, working mainly on the front-end JavaScript, HTML and CSS styling. Throughout the project I ensured that the project was on track and meeting the needs of the client and stakeholders, as well as liaising with account and project managers, clients and also the developers working on the project.', 'http://mylearningjourney.acuvue.co.uk/'),
+(4, 'RSSB RRUKA', '/img/projects/thumbnails/RSSBRruka.png', '/img/projects/RSSBRruka.png', '2012-12-03 13:16:30', 'The aim of this project was to take an already existing wordpress site which had been built with an old version, using the default wordpress theme. Update the version of wordpress and create \na personalised theme using the companys branding colours.\n<br /><br />\nThe main point of this site was to create different news items and post content types as well as an events section with suggestions and liking options.  My role and responsibilities for this \nproject was to ensure that the build requirements and suggestions were possible, and the site was built on track with deadlines. As development lead I created the functional requirements \nand outlined how the build should be carried, out as well as working on the development.', 'http://rruka.org.uk/');
 
 -- --------------------------------------------------------
 
@@ -171,15 +173,15 @@ CREATE TABLE IF NOT EXISTS `td_instagram_cache` (
 --
 
 INSERT INTO `td_instagram_cache` (`id`, `thumbnail_url`) VALUES
-(1, 'http://distilleryimage6.s3.amazonaws.com/bdb65b28418d11e2a76e22000a9f1968_5.jpg'),
-(2, 'http://distilleryimage0.s3.amazonaws.com/3aeca4ec3eb611e2a1b122000a1f9702_5.jpg'),
-(3, 'http://distilleryimage4.s3.amazonaws.com/706610cc393411e2b93522000a1f96b2_5.jpg'),
-(4, 'http://distilleryimage10.s3.amazonaws.com/b1f6854c38d211e2bd9022000a1fa522_5.jpg'),
-(5, 'http://distilleryimage3.s3.amazonaws.com/15984a22372011e2a07422000a1fab83_5.jpg'),
-(6, 'http://distilleryimage3.s3.amazonaws.com/03f28e5c371d11e28a5c22000a1f8acf_5.jpg'),
-(7, 'http://distilleryimage2.s3.amazonaws.com/dea0cc16348011e2952822000a1f9695_5.jpg'),
-(8, 'http://distilleryimage5.s3.amazonaws.com/80997d8c2f5511e2b52122000a1fa4b5_5.jpg'),
-(9, 'http://distilleryimage2.s3.amazonaws.com/13085a402f5511e295e31231380ff907_5.jpg');
+(1, 'http://distilleryimage2.s3.amazonaws.com/19f99266583a11e2979222000a1f9bc6_5.jpg'),
+(2, 'http://distilleryimage7.s3.amazonaws.com/9f3baea252c011e2bb3e22000a1fb8a8_5.jpg'),
+(3, 'http://distilleryimage1.s3.amazonaws.com/bba53cc64e2311e2b7ab22000a1f90e7_5.jpg'),
+(4, 'http://distilleryimage6.s3.amazonaws.com/bdb65b28418d11e2a76e22000a9f1968_5.jpg'),
+(5, 'http://distilleryimage0.s3.amazonaws.com/3aeca4ec3eb611e2a1b122000a1f9702_5.jpg'),
+(6, 'http://distilleryimage4.s3.amazonaws.com/706610cc393411e2b93522000a1f96b2_5.jpg'),
+(7, 'http://distilleryimage10.s3.amazonaws.com/b1f6854c38d211e2bd9022000a1fa522_5.jpg'),
+(8, 'http://distilleryimage3.s3.amazonaws.com/15984a22372011e2a07422000a1fab83_5.jpg'),
+(9, 'http://distilleryimage3.s3.amazonaws.com/03f28e5c371d11e28a5c22000a1f8acf_5.jpg');
 
 -- --------------------------------------------------------
 
@@ -241,66 +243,66 @@ CREATE TABLE IF NOT EXISTS `td_tweet_cache` (
 --
 
 INSERT INTO `td_tweet_cache` (`id`, `hashtag`, `date`, `text`, `user`) VALUES
-(1, 'jquery', '13/12/2012', '#jQuery-Prototype Web Design &amp; Coding by karlito: I am looking for a webdesigner who can design and build a site... http://t.co/wtik6I51', 'ulohjobs'),
-(2, 'jquery', '13/12/2012', 'SocialCount - progressively enhanced, lazy loaded, mobile friendly social networking widgets: https://t.co/c6Cyiqe6 #jquery', '_mattbailey'),
-(3, 'jquery', '13/12/2012', '@_kud It fired the alert - what problem are you seeing? #jQuery', 'jaylblanchard'),
-(4, 'jquery', '13/12/2012', '@_kud ...and it works  #jquery', 'andyvividnight'),
-(5, 'jquery', '13/12/2012', 'jQuery what the fuck? http://t.co/hojfDV03 // Try to type "enter" on text input. #jquery', '_kud'),
-(6, 'jquery', '13/12/2012', 'javascript - Jquery click event on &lt;a&gt; tag not firing properly - Stack ... http://t.co/TLlz2JGu #jQuery', 'WebDesignMagz'),
-(7, 'jquery', '13/12/2012', 'RT @CKGrafico: #jQuery jQuery EasyTabs Plugin: EasyTabs is a lightweight jQuery plugin to provide full tab ... http://t.co/tUOoykMx vÃ­a @jQueryPlugins', 'Ecuaideas'),
-(8, 'jquery', '13/12/2012', '#jQuery-Prototype Advanced Jquery / JS expert with basic html skills by moreprj: 2 sections on one page exist ..... http://t.co/Wgfxuf6i', 'ulohjobs'),
-(9, 'jquery', '13/12/2012', '#jQuery-Prototype Advanced Jquery / JS expert with basic html skills by moreprj: 2 sections on one ... http://t.co/gwES5hXH #Programming', 'reconnect_Job'),
-(10, 'jquery', '13/12/2012', 'might have seriously fallen in love with #jQuery!', 'danjelv'),
-(11, 'jquery', '13/12/2012', 'RT @DZone: "Drag and Drop with AngularJS using jQuery UI" http://t.co/50zrf2Um #angularjs #jquery', 'jlamigueiro'),
-(12, 'jquery', '13/12/2012', '#jQuery Plugin to convert HTML select box to DIV based dropdown - iSummation WebSite: http://t.co/uTLkLCco', 'thecfguy'),
-(13, 'jquery', '13/12/2012', 'Simple Effects for Drop-Down Lists http://t.co/2laYRdAE #jquery', 'incredibleTB'),
-(14, 'jquery', '13/12/2012', 'How to make a progress bar using #jQuery http://t.co/RuEvGzRJ via @sharethis #webdev #webprogramming', 'mrboolteam'),
-(15, 'jquery', '13/12/2012', 'is Full Stack Web Developer (m/f) http://t.co/zcsVdveA #sql #.net #asp.net #jquery #nosql #c# #javascript #job... http://t.co/ry76mbq7', 'findmjob'),
-(16, 'javascript', '13/12/2012', 'RT @siphilp Check out Analytics.js : The hassle-free way to integrate analytics into any web application. http://t.co/RLtcKnax #javascript', 'nielsbjerg'),
-(17, 'javascript', '13/12/2012', 'RT @acido69: High Performance Animation Library for #Javascript http://t.co/r4N7cHtg', 'javierland'),
-(18, 'javascript', '13/12/2012', 'High Performance Animation Library for #Javascript http://t.co/r4N7cHtg', 'acido69'),
-(19, 'javascript', '13/12/2012', '#html5 game tutorial with enchant.js http://t.co/1S0wdA6z #javascript', 'alex_kravets'),
-(20, 'javascript', '13/12/2012', 'Puzzle app for android and ios phones and tablets by ralleman: I need one or more people to help dev... http://t.co/r97dumex #Javascript', 'natadipurashop'),
-(21, 'javascript', '13/12/2012', 'Puzzle app for android and ios phones and tablets by ralleman: I need one or more people to help dev... http://t.co/m1kqfWHy #Javascript', 'R_DSGN'),
-(22, 'javascript', '13/12/2012', '#javascript #timeline http://t.co/axRlffnK', 'cagdasolgun'),
-(23, 'javascript', '13/12/2012', '#jobs #stellenangebote #jobsuche #javascript #xml #php #Hamburg 101 aktuelle Javascript Xml Php Hamburg Jobs http://t.co/C6t1tUsa', 'Renego_Jobs_DE'),
-(24, 'javascript', '13/12/2012', 'Creating a simple web dev server environment using Node JS  http://t.co/2cCKLf8v http://t.co/nptmVdTg  #nodejs #javascript', 'adesis'),
-(25, 'javascript', '13/12/2012', '@jlix Depends on skill level. jQMobile/sencha? I''d go with jQM ..or just plain html/css + jquery or zepto #mobile #javascript #framework', 'itechnologynet'),
-(26, 'javascript', '13/12/2012', 'Parsing correctly dates/decimals from and to #javascript via ajax calls to services based on client/server region is story for itself.', 'bojanv91'),
-(27, 'javascript', '13/12/2012', 'xCharts - A JavaScript library for data-driven chart visualizations\nhttp://t.co/RHgFirIC\ntake notes â™«â™ªâ™ª\n #data #javascript #plugins', 'penworks'),
-(28, 'javascript', '13/12/2012', '#javascript Puzzle app for android and ios phones and tablets by ralleman: I need one or more people to help dev... http://t.co/DcVUj817', 'ulohjobs'),
-(29, 'javascript', '13/12/2012', 'Best practices for Javascript Proramming http://t.co/R098E7dg\n#javascript', 'rBharshetty'),
-(30, 'javascript', '13/12/2012', 'is Full Stack Web Developer (m/f) http://t.co/zcsVdveA #sql #.net #asp.net #jquery #nosql #c# #javascript #job... http://t.co/ry76mbq7', 'findmjob'),
-(31, 'php', '13/12/2012', 'RT @Hajar_Abdullah: #php pfft! 10 hours of backache is enough for today!', 'SreejithMJ'),
-(32, 'php', '13/12/2012', '#PHP modifications for auction site by ardge24: i currently have a auction site in which is in deve... http://t.co/YQfM0h5M #Programming', 'reconnect_Job'),
-(33, 'php', '13/12/2012', '#php pfft! 10 hours of backache is enough for today!', 'Hajar_Abdullah'),
-(34, 'php', '13/12/2012', 'RT @ullohjobs: #PHP Website redesign development - repost by fapetu: I have a website that needs to be redesigned to specificat... http://t.co/AznwugXl', 'SreejithMJ'),
-(35, 'php', '13/12/2012', '#PHP Website redesign development - repost by fapetu: I have a website that needs to be redesigned to specificat... http://t.co/AznwugXl', 'ullohjobs'),
-(36, 'php', '13/12/2012', 'Stasik Agnes in CHARLOTTE NC wants DATA entry  http://t.co/1p9qRMcG #Freelancer #PHP #HTML #Wordpress #Joomla #Magento #Drupal', 'Drupal_Web_Job'),
-(37, 'php', '13/12/2012', 'Lead Trade Support Engineer / Next Step Systems / Chicago, IL http://t.co/02WSUOns #php', 'JobMotel_PHP'),
-(38, 'php', '13/12/2012', 'Senior PHP Developer (Tech Temp) / Georgia Institute of Technology / Atlanta, GA http://t.co/B0qtCiLL #php', 'JobMotel_PHP'),
-(39, 'php', '13/12/2012', 'PHP - Developer / Career Brokers / Charlotte, NC http://t.co/7aoShK7L #php', 'JobMotel_PHP'),
-(40, 'php', '13/12/2012', 'PHP - Developer / Career Brokers / Columbus, OH http://t.co/VSy3aLvK #php', 'JobMotel_PHP'),
-(41, 'php', '13/12/2012', '#job #php Website redesign development - repost by fapetu: I have a website that needs to be redesign... http://t.co/hu3ETPyJ #freelance', 'JobsOnAir1'),
-(42, 'php', '13/12/2012', '#job #php Collect Data from website R1 by TodaysJob: Hello,    I need a software that will collect al... http://t.co/HTSOxZdI #freelance', 'JobsOnAir1'),
-(43, 'php', '13/12/2012', '#job #php little joomla website with personnalised template by m2704: Doing a joomla web site of the ... http://t.co/Z6DayMbT #freelance', 'JobsOnAir1'),
-(44, 'php', '13/12/2012', '#job #php Wordpress theme redesign by josousa: An existing wordpress template needs to be edited acco... http://t.co/A5MimFP9 #freelance', 'JobsOnAir1'),
-(45, 'php', '13/12/2012', '#job #php Web Design &amp; Development by dnsphost: We are an India based web design and web development ... http://t.co/zzATSefN #freelance', 'JobsOnAir1'),
-(46, 'mysql', '13/12/2012', '#MySQL Web Design &amp; Development by dnsphost: We are an India based web design and web development firm. We consi... http://t.co/50U49jcE', 'ullohjobs'),
-(47, 'mysql', '13/12/2012', '#MySql Web Design &amp; Development by dnsphost: We are an India based web design and web development firm. We consi... http://t.co/P6fGJqe5', 'luckyJob_'),
-(48, 'mysql', '13/12/2012', 'Use #MySQL monitoring to optimize performance http://t.co/cjKo1oaf', 'Moosh_be'),
-(49, 'mysql', '13/12/2012', 'RP A graphical overview of your MySQL database #topicmaps #database #mysql #graphics - http://t.co/bXxxNZvX', 'patrickDurusau'),
-(50, 'mysql', '13/12/2012', 'Open #job: Build a website #MySQL #pph http://t.co/y3cbuadG', 'pph_IT_web'),
-(51, 'mysql', '13/12/2012', 'English test done! Coding the #php for creating stuff. #mysql', 'TobiJes'),
-(52, 'mysql', '13/12/2012', 'Mysql query no coge variable #mysql #variable #formulario #query http://t.co/FpHRh4dz', 'fdwphp'),
-(53, 'mysql', '13/12/2012', '#MySQL Set up DB on existing postgresql by SpatialSteve: I have a server that holds ESRI .shp and .dbf files (so... http://t.co/dG2D4Plo', 'ullohjobs'),
-(54, 'mysql', '13/12/2012', '#MySql codeigniter admin backend, user login, system and database design by todkersten: Urgent !!    Hi Codeigni... http://t.co/xFYAYREQ', 'luckyJob_'),
-(55, 'mysql', '13/12/2012', 'database design by Ninecstech: Â· A database that must utilise #MySQL; Â· Aâ€¦ http://t.co/tzgtYsCX #freelance #job', 'remote_work'),
-(56, 'mysql', '13/12/2012', 'database design by Ninecstech: Â· A database that must utilise #MySQL; Â· Aâ€¦ http://t.co/NJfO7PhW #freelance #job', 'working_athome_'),
-(57, 'mysql', '13/12/2012', 'database design by Ninecstech: Â· A database that must utilise #MySQL; Â· Aâ€¦ http://t.co/7A17IdZp #freelance #job', 'job_freelancer_'),
-(58, 'mysql', '13/12/2012', 'database design by Ninecstech: Â· A database that must utilise #MySQL; Â· Aâ€¦ http://t.co/cPJWnLOe #freelance #job', 'now_hiring_'),
-(59, 'mysql', '13/12/2012', 'database design by Ninecstech: Â· A database that must utilise #MySQL; Â· Aâ€¦ http://t.co/2zrLjA8U #freelance #job', '_jobonline'),
-(60, 'mysql', '13/12/2012', 'database design by Ninecstech: Â· A database that must utilise #MySQL; Â· Aâ€¦ http://t.co/q6AewDOZ #freelance #job', 'furthest_works');
+(1, 'jquery', '08/01/2013', '#jQuery-Prototype HTML5, CSS3 web application development and design by jmorjaria: Must have experi... http://t.co/6WtVy5wb #Programming', 'reconnect_Job'),
+(2, 'jquery', '08/01/2013', '#jQuery-Prototype HTML5, CSS3 web application development and design by jmorjaria: Must have experience with pja... http://t.co/AzeU9uky', 'ulohjobs'),
+(3, 'jquery', '08/01/2013', '#jquery #job - Lightbox (jQuery) gallery with comments. - MySQL PHP jQuery (Max. $500) - http://t.co/RBFtZH60 #jobs', 'dnzJquery'),
+(4, 'jquery', '08/01/2013', 'Best Practices When Working With JavaScript Templates http://t.co/hvVKnjGV #webdev #developer #jquery #wpo', 'ChrisLove'),
+(5, 'jquery', '08/01/2013', 'Check out this great item #jquery #portfolio #responsive   template "VALOR - Responsive HTML Template" http://t.co/BmRWswOs', 'Orange_Idea_RU'),
+(6, 'jquery', '08/01/2013', 'Jquery to trigger HTML - Stack Overflow http://t.co/olaRDLWe #jQuery', 'WebDesignMagz'),
+(7, 'jquery', '08/01/2013', '@amsul_  nice job on the #jquery pickadate.js i#awesome #html5 datepicker http://t.co/qyZMIkic', 'bestjquery'),
+(8, 'jquery', '08/01/2013', 'Make Pretty Charts For Your App with #jQuery and #xCharts http://t.co/y2ApccM7 via @tutorialzine', 'batravarun'),
+(9, 'jquery', '08/01/2013', 'Front-end UI/UX Developer http://t.co/SuARKM5W #php #svn #ajax #rest #html5 #jquery #photoshop #37signals #javascript #jobs #hiring #careers', 'jQueryBot'),
+(10, 'jquery', '08/01/2013', 'HOT JOB: Senior Web Developer | Melbourne | Integrated Agency | Leadership Opps. #php #javascript #jquery #zend http://t.co/XXmkDZ9v', 'jQueryBot'),
+(11, 'jquery', '08/01/2013', 'Front-end UI/UX Developer http://t.co/QpkBwS8Y #php #svn #ajax #rest #html5 #jquery #photoshop #37signals #javascript #jobs #hiring #careers', 'findmjob'),
+(12, 'jquery', '08/01/2013', 'HOT JOB: Senior Web Developer | Melbourne | Integrated Agency | Leadership Opps. #php #javascript #jquery #zend http://t.co/mXQWkj0A', 'SandraBenskin'),
+(13, 'jquery', '08/01/2013', '#jQuery-Prototype Modify Image Zoom Script by interskate: I am using the Network Solutions shopping... http://t.co/TNmYcRHV #Programming', 'reconnect_Job'),
+(14, 'jquery', '08/01/2013', 'Open Source Staffing is hiring! One-click Apply with LinkedI http://t.co/fQD60Eox #job #OpenSourceStaffing #javascript #css #jquery', 'OSSJobs'),
+(15, 'jquery', '08/01/2013', 'Make Pretty Charts For Your App with #jQuery and #xCharts http://t.co/x0EzHQ15 via @tutorialzine', 'vmdude_fr'),
+(16, 'javascript', '08/01/2013', '#javascript JavaScript and jQuery Project by SYA2011: JavaScript and jQuery Project    You must have experience ... http://t.co/fVDYGamG', 'ulohjobs'),
+(17, 'javascript', '08/01/2013', 'RT @_mlb: #Blog #JavaScript Don''t rely on globals http://t.co/uj5bU8t7', 'jBleuzen'),
+(18, 'javascript', '08/01/2013', 'How can I get specific SharePoint site GUID using javascript/jquery http://t.co/Aa5mZjI6 #javascript', 'StackSharePoint'),
+(19, 'javascript', '08/01/2013', 'javascript Programmer Job (Grass Valley, CA)  http://t.co/5ABs9oth #javascript #Programmer #job #jobs #california #ca #Grass Valley', 'CaliforniaJobLi'),
+(20, 'javascript', '08/01/2013', '.@viatropos: Many useful Twitter Bootstrap components - http://t.co/Of3ssbBR #bootstrap #html5 #css3 #spa #javascript', 'caidong'),
+(21, 'javascript', '08/01/2013', 'Been doing an awful lot of work in #javascript lately... I''m concerned I might actually be liking it... What should I do?!', 'nixeldev'),
+(22, 'javascript', '08/01/2013', 'JavaScript News: Stocks to watch at close on Xday http://t.co/avl0Lj62 #JavaScript', 'JSJobs'),
+(23, 'javascript', '08/01/2013', 'RT @pxlhero: Still looking for front-end folks in NYC. Jr or Snr. Full-time gig. Hit me up for more info. #mobile #javascript #html5 #nyc #developers', 'RyukXD'),
+(24, 'javascript', '08/01/2013', '#Blog #JavaScript Don''t rely on globals http://t.co/uj5bU8t7', '_mlb'),
+(25, 'javascript', '08/01/2013', 'Modify Image Zoom Script by interskate: I am using the Network Solutions shopping cart which is very... http://t.co/Vh42okZz #Javascript', 'natadipurashop'),
+(26, 'javascript', '08/01/2013', 'Modify Image Zoom Script by interskate: I am using the Network Solutions shopping cart which is very... http://t.co/BObvC4yH #Javascript', 'R_DSGN'),
+(27, 'javascript', '08/01/2013', 'Still looking for front-end folks in NYC. Jr or Snr. Full-time gig. Hit me up for more info. #mobile #javascript #html5 #nyc #developers', 'pxlhero'),
+(28, 'javascript', '08/01/2013', 'Rails Engineer http://t.co/x7rMUL4m #css #html #rails #mongodb #javascript #jobs #hiring #careers', 'findmjob'),
+(29, 'javascript', '08/01/2013', 'RT @andy_clement: #Scripted #JavaScript editor v0.3 now available. Release notes: http://t.co/c8bH5yxK', 'xavierhanin'),
+(30, 'javascript', '08/01/2013', 'Front-end UI/UX Developer http://t.co/SuARKM5W #php #svn #ajax #rest #html5 #jquery #photoshop #37signals #javascript #jobs #hiring #careers', 'jQueryBot'),
+(31, 'php', '08/01/2013', 'PHP News: Mentioned today on Live at 9 Tuesday, January 8 http://t.co/kEFj2X94 #PHP', 'FindPHPJobs'),
+(32, 'php', '08/01/2013', 'More reviews on true problems with #PHP\nhttp://t.co/OjIoY4VC', 'Dev_Knowhow'),
+(33, 'php', '08/01/2013', 'Save your time in building #customized #applications in #PHP http://t.co/fGD7JzsG', 'KrishnaRockz7'),
+(34, 'php', '08/01/2013', 'RT @nemshilov: so, #rails become the new #php ?', 'SreejithMJ'),
+(35, 'php', '08/01/2013', 'so, #rails become the new #php ?', 'nemshilov'),
+(36, 'php', '08/01/2013', 'RT @c2graph volunteer #php dev needed for the massive  timeline on #manning http://t.co/fMNKfwmM #WikiLeaks', 'FreeBradManning'),
+(37, 'php', '08/01/2013', 'Goodbye 5.3 #php', 'carlucchese'),
+(38, 'php', '08/01/2013', 'So, you''ve decided you want to write a program, or just have a change... http://t.co/zNX3ZycH #ios #languages #perl #php #programming #style', 'BrainFadeDotNet'),
+(39, 'php', '08/01/2013', 'Think I just found one of my clients for the semester. Time to get work now on storyboards. #WebDevelopment #DatabaseManagement #PHP #MySQL', 'AG3N1US'),
+(40, 'php', '08/01/2013', 'RT @c2graph volunteer #php dev needed for the massive  timeline on #manning http://t.co/vw27S7t3 #WikiLeaks', 'wikileakBot'),
+(41, 'php', '08/01/2013', '#job #php Prestashop Expert Needed for Update and Changes/Fixes by modernsh: I already have a Prestas... http://t.co/ZLVcwJrP #freelance', 'JobsOnAir1'),
+(42, 'php', '08/01/2013', '#job #php gps  easycap sensor for ubuntu arm by Bladimiir: Hardware to using:    ULTRA COMPACT 1.7GHz... http://t.co/SCBcRyeT #freelance', 'JobsOnAir1'),
+(43, 'php', '08/01/2013', '#job #php simple wordpress jobs for website by gportnoy: I am already using a wordpress template (jew... http://t.co/bkZiEuNX #freelance', 'JobsOnAir1'),
+(44, 'php', '08/01/2013', '#job #php Procon Plugin by p19blo: I have a BF3 server and use Procon to manage it. i need a coded pl... http://t.co/pizHkhMc #freelance', 'JobsOnAir1'),
+(45, 'php', '08/01/2013', '#job #php DEVELOPER NEED by techbrothersteam: i need developer(individual)   for my new IT COMPANY.  ... http://t.co/EZiwEQJK #freelance', 'JobsOnAir1'),
+(46, 'mysql', '08/01/2013', '#Job gps  easycap sensor for ubuntu arm by Bladimiir: Hardware to using:    ULTRA COMPACT 1.... http://t.co/PiKsKra5 #Mysql #Programming', 'jasonparker07'),
+(47, 'mysql', '08/01/2013', '#Job JavaScript and jQuery Project by SYA2011: JavaScript and jQuery Project    You must hav... http://t.co/i7luzljj #Mysql #Programming', 'jasonparker07'),
+(48, 'mysql', '08/01/2013', '#Job API Project by SYA2011: API Project    You must be able to extract data from a third pa... http://t.co/12fkIgmc #Mysql #Programming', 'jasonparker07'),
+(49, 'mysql', '08/01/2013', 'Think I just found one of my clients for the semester. Time to get work now on storyboards. #WebDevelopment #DatabaseManagement #PHP #MySQL', 'AG3N1US'),
+(50, 'mysql', '08/01/2013', 'Damnâ€¦.  I think I just jacked up that #percona #mysql install we did in training.  But I guess that''s why you train, right?', 'jdgonzalez'),
+(51, 'mysql', '08/01/2013', 'Plane ticket-check! Hotel-check! Car-check! All ready to visit @tokutek offices and work on our plans of #bigdata domination #mysql #mariadb', 'seattlegaucho'),
+(52, 'mysql', '08/01/2013', 'Can you answer this? "InnoDB: error clustered record for sec rec not found" MySQL 5.5.28 http://t.co/wGlmoFOm #mysql', 'StackDBAs'),
+(53, 'mysql', '08/01/2013', 'Website http://t.co/hZmQuxel needs #mySQL fixed and configured for user loginâ€¦ http://t.co/smjsWwdy #freelance #job', '_jobonline'),
+(54, 'mysql', '08/01/2013', 'Website http://t.co/hZmQuxel needs #mySQL fixed and configured for user loginâ€¦ http://t.co/5277d0tO #freelance #job', '_jobonline'),
+(55, 'mysql', '08/01/2013', 'Well. It is a start! #MySql #HTML #PHP http://t.co/6q76x4GL', 'dtexlyn'),
+(56, 'mysql', '08/01/2013', 'I Need a Designer!!! Website http://t.co/M6ixxULe needs #mySQL fixed and configured for userâ€¦ http://t.co/UQM2j5zo', 'AikiSogura'),
+(57, 'mysql', '08/01/2013', '#MySql Website http://t.co/nd0TWwaS needs mySQL fixed and configured for user login/Contact/sign-up funtionality... http://t.co/7IELwe9W', 'luckyJob_'),
+(58, 'mysql', '08/01/2013', '#MySQL Website http://t.co/gRguaMRM needs mySQL fixed and configured for user login/Contact/sign-up funtionality... http://t.co/8YNYwTyt', 'ullohjobs'),
+(59, 'mysql', '08/01/2013', '#Job HTML contact form coding by bs5143: I am developing a new website geared toward collect... http://t.co/0kq8PL3Z #Mysql #Programming', 'jasonparker07'),
+(60, 'mysql', '08/01/2013', '#Job Drupal - Drupal CMS Search Function Update by kanderson97: This is a simple Job!    I h... http://t.co/Rg6U9fF8 #Mysql #Programming', 'jasonparker07');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
