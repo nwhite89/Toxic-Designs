@@ -491,7 +491,7 @@ a.social:hover {
 	border-bottom-left-radius: 4px;
 }
 .readmore {
-	font-size: 12px;
+	font-size: 0.8em;
 	text-decoration: none;
 }
 .readmore:hover {
@@ -660,6 +660,7 @@ p.pagination {
 	}
 	#tweets {
 		margin-top: 20px;
+		margin-bottom: 10px;
 		display: block;
 	}
 	.sixteen.columns.navi,

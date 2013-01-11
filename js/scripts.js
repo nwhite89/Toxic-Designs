@@ -4,11 +4,14 @@
                         var degrees = $(this).data('roundabout').degrees,
                             roundaboutBearing = $(this).parent().data('roundabout').bearing,
                             rotateY = Math.round(roundaboutBearing - degrees);
-                        $(this).css({
-                            "-webkit-transform": "perspective(2000) rotateY(" + rotateY + "deg)",
-                            "-moz-transform": "perspective(2000) rotateY(" + rotateY + "deg)",
-                            "transform": "perspective(2000) rotateY(" + rotateY + "deg)"
-                        });
+                        if($.browser.safari != true)
+                        {
+                            $(this).css({
+                                "-webkit-transform": "perspective(2000) rotateY(" + rotateY + "deg)",
+                                "-moz-transform": "perspective(2000) rotateY(" + rotateY + "deg)",
+                                "transform": "perspective(2000) rotateY(" + rotateY + "deg)"
+                            });
+                        }
                     }
                 })
                 .show()
