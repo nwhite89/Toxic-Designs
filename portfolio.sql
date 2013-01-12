@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 11, 2013 at 09:47 PM
+-- Generation Time: Jan 12, 2013 at 09:52 PM
 -- Server version: 5.5.24
 -- PHP Version: 5.3.10-1ubuntu3.4
 
@@ -67,8 +67,7 @@ INSERT INTO `td_about_social` (`id`, `label`, `username`, `url`) VALUES
 (1, 'twitter', '@ToxicD89', 'http://bit.ly/13ei1v6'),
 (2, 'Github', 'nwhite89', 'http://bit.ly/XfgtO2'),
 (3, 'linkedin', 'Nick White', 'http://linkd.in/UROMvc'),
-(4, 'instagram', 'nwhite89', 'http://bit.ly/UwqrZd'),
-(5, 'Facebook', 'ToxicD', 'http://on.fb.me/ZhRppb');
+(4, 'instagram', 'nwhite89', 'http://bit.ly/UwqrZd');
 
 -- --------------------------------------------------------
 
@@ -90,13 +89,13 @@ CREATE TABLE IF NOT EXISTS `td_blog_posts` (
 --
 
 INSERT INTO `td_blog_posts` (`id`, `blog_title`, `blog_post`, `blog_date`) VALUES
-(1, 'To be native, or to be web that is the question', 'We all know that there is a complete massive boom in the creation of applications over recent years (and still growing). But is it really necessarily the best option to build a native application?<br /><br />\nIt all depends on your business, your application and your aim of the app.<br /><br />\nDo you already have a mobile web version?<br />\nIs it possible to create all the functionalities of your app with HTML5?<br />\nIs it possible to have a web and native app with further functionality in the native?<br /><br />\nPersonally I believe that it is much more worthwhile for a company to create a web application using some soft of framework such as jQuery Mobile or Sencha Touch 2. Using Sencha Touch 2 will allow developers to create one application and "wrap the application" (so to speak) creating a native application for iPhone, Android and Blackberry. jQuery Mobile can do this too when incorporating the application with Adobe''s PhoneGap.<br /><br />\nSo why not at least initially create an application using PhoneGap allowing your application to be hosted on the web, while also being packaged for every operating system rather than shedding out lots of cash to incorporate your app on all of them, or close your market before you have already started providing the application to only one OS?<br /><br />\nSo what is your take on the native vs web app world?', '2013-02-14 11:27:14'),
-(3, 'Moving onto SharePoint', 'I have recently taken a work placement at a company Content Formula LTD which is mainly a Digital Healthcare Agency; designing, developing and looking after content for such businesses as Johnson & Johnson. The main part of the agency is to look after and further develop the companies intranet websites.<br /><br />\n\nWith this I have taken a role as "Junior Web Developer" which involves me developing websites using various coding languages which I have previously used (such as PHP, CSS, HTML, JavaScript and jQuery) however I have had to learn MOSS07 and with that XSL.<br /><br />\n\nI will be posting little snipits of code on my blog for "How To:".', '2013-01-11 12:20:07'),
-(4, 'SharePoint Services jQuery Plugin', 'Since starting to develop SharePoint sites I have started to look into SharePoint services; as I do not tend to get access to SharePoint Designer. Which limits what I can and cannot do when developing for SharePoint.<br /><br />\n\nOne option is to use the jQuery plugin <a href="http://spservices.codeplex.com/" title="SharePoint Services" target="_blank">SPServices</a> this plugin allows you to tap into so much more and opens up the possibilities and limitations that SharePoint has.<br /><br />\n\nFor Example:<br />\nSharing list data between different SharePoint websites (I will be posting soon a tutorial on how to do this).<br /><br />\n\nIf you develop for SharePoint I would strongly advise that you look into <a href="http://spservices.codeplex.com/" title="SharePoint Services" target="_blank">SPServices</a>', '2013-01-23 10:47:22'),
-(5, 'Create permission levels for MOSS07', 'This simple new permission level is great for allowing everyone to use forms that have been built with <a href="http://spservices.codeplex.com/" title="SharePoint Services" target="_blank">SPServices</a><br /><br />\r\n\r\nThis is a simple step by step  of how to create permission levels for MOSS07<br /><br />\r\n<ul>\r\n	<li>When on the Site Collection</li>\r\n	<li>Go to "Site Actions" menu</li>\r\n	<li>"Site Settings" > "Modify All Site Settings"</li>\r\n	<li>Click on the Link on the Quick Launch Bar "Advance Permissions"</li>\r\n	<li>Click on the Drop Down for "Settings"</li>\r\n	<li>Click "Permissions Levels"</li>\r\n	<li>This will then take you to a screen which will allow you to Add a Permission Level or Delete current permission levels.</li>\r\n</ul>', '2013-02-01 19:52:34'),
-(6, 'My Final Year Project', 'For my final year project while at the University of Portsmouth; I decided to do an engineering project. This project was using Transport for London’s (TFL) API’s providing users a mobile website for travelling around London more easily.<br />\r\n\r\nBefore starting the project there was a lot of iOS based applications for travelling around London however, not all of these compile the information and offer the services in one app. Downloading some of the applications you will be able to see that most of them only have a main focus (such as traffic cameras or tube status).', '2013-02-06 16:50:40'),
-(7, 'Mobile London iOS', 'Since completing the Mobile London project for my dissertation at www.MobileLondon.org. I have started brief work on an iOS PhoneGap application with the same and some further functionality.<br /><br />\n\nFurther news to come soon', '2013-02-27 08:12:34'),
-(8, 'iOS Footer for jQuery Mobile', 'Since starting the iOS Phonegap application with jQuery Mobile, I have come across a plugin called Bartender. This plugin changes the footer bar to have a more "iOS" look and feel about it for the end user.\r\n<br /><br />\r\nUsing this for a Phonegap application is therefore a great idea to keep your end user have an experience that doesn''t feel too different from their other applications on their device.', '2013-03-01 07:33:19');
+(1, 'To be native, or to be web that is the question', 'We all know that there is a complete massive boom in the creation of applications over recent years (and still growing). But is it really necessarily the best option to build a native application?<br /><br />\nIt all depends on your business, your application and your aim of the app.<br /><br />\nDo you already have a mobile web version?<br />\nIs it possible to create all the functionalities of your app with HTML5?<br />\nIs it possible to have a web and native app with further functionality in the native?<br /><br />\nPersonally I believe that it is much more worthwhile for a company to create a web application using some soft of framework such as jQuery Mobile or Sencha Touch 2. Using Sencha Touch 2 will allow developers to create one application and "wrap the application" (so to speak) creating a native application for iPhone, Android and Blackberry. jQuery Mobile can do this too when incorporating the application with Adobe''s PhoneGap.<br /><br />\nSo why not at least initially create an application using PhoneGap allowing your application to be hosted on the web, while also being packaged for every operating system rather than shedding out lots of cash to incorporate your app on all of them, or close your market before you have already started providing the application to only one OS?<br /><br />\nSo what is your take on the native vs web app world?', '2013-01-25 11:27:14'),
+(3, 'Moving onto SharePoint', 'I have recently taken a work placement at a company Content Formula LTD which is mainly a Digital Healthcare Agency; designing, developing and looking after content for such businesses as Johnson & Johnson. The main part of the agency is to look after and further develop the companies intranet websites.<br /><br />\n\nWith this I have taken a role as "Junior Web Developer" which involves me developing websites using various coding languages which I have previously used (such as PHP, CSS, HTML, JavaScript and jQuery) however I have had to learn MOSS07 and with that XSL.<br /><br />\n\nI will be posting little snipits of code on my blog for "How To:".', '2012-11-29 12:20:07'),
+(4, 'SharePoint Services jQuery Plugin', 'Since starting to develop SharePoint sites I have started to look into SharePoint services; as I do not tend to get access to SharePoint Designer. Which limits what I can and cannot do when developing for SharePoint.<br /><br />\n\nOne option is to use the jQuery plugin <a href="http://spservices.codeplex.com/" title="SharePoint Services" target="_blank">SPServices</a> this plugin allows you to tap into so much more and opens up the possibilities and limitations that SharePoint has.<br /><br />\n\nFor Example:<br />\nSharing list data between different SharePoint websites (I will be posting soon a tutorial on how to do this).<br /><br />\n\nIf you develop for SharePoint I would strongly advise that you look into <a href="http://spservices.codeplex.com/" title="SharePoint Services" target="_blank">SPServices</a>', '2012-12-12 10:47:22'),
+(5, 'Create permission levels for MOSS07', 'This simple new permission level is great for allowing everyone to use forms that have been built with <a href="http://spservices.codeplex.com/" title="SharePoint Services" target="_blank">SPServices</a><br /><br />\r\n\r\nThis is a simple step by step  of how to create permission levels for MOSS07<br /><br />\r\n<ul>\r\n	<li>When on the Site Collection</li>\r\n	<li>Go to "Site Actions" menu</li>\r\n	<li>"Site Settings" > "Modify All Site Settings"</li>\r\n	<li>Click on the Link on the Quick Launch Bar "Advance Permissions"</li>\r\n	<li>Click on the Drop Down for "Settings"</li>\r\n	<li>Click "Permissions Levels"</li>\r\n	<li>This will then take you to a screen which will allow you to Add a Permission Level or Delete current permission levels.</li>\r\n</ul>', '2013-01-10 19:52:34'),
+(6, 'My Final Year Project', 'For my final year project while at the University of Portsmouth; I decided to do an engineering project. This project was using Transport for London’s (TFL) API’s providing users a mobile website for travelling around London more easily.<br />\r\n\r\nBefore starting the project there was a lot of iOS based applications for travelling around London however, not all of these compile the information and offer the services in one app. Downloading some of the applications you will be able to see that most of them only have a main focus (such as traffic cameras or tube status).', '2012-12-19 16:50:40'),
+(7, 'Mobile London iOS', 'Since completing the Mobile London project for my dissertation at www.MobileLondon.org. I have started brief work on an iOS PhoneGap application with the same and some further functionality.<br /><br />\n\nFurther news to come soon', '2013-02-07 08:12:34'),
+(8, 'iOS Footer for jQuery Mobile', 'Since starting the iOS Phonegap application with jQuery Mobile, I have come across a plugin called Bartender. This plugin changes the footer bar to have a more "iOS" look and feel about it for the end user.\r\n<br /><br />\r\nUsing this for a Phonegap application is therefore a great idea to keep your end user have an experience that doesn''t feel too different from their other applications on their device.', '2013-02-13 07:33:19');
 
 -- --------------------------------------------------------
 
@@ -126,6 +125,21 @@ INSERT INTO `td_categories` (`id`, `title`) VALUES
 (8, 'Tutorials'),
 (9, 'XSL'),
 (10, 'General News');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `td_comments`
+--
+
+DROP TABLE IF EXISTS `td_comments`;
+CREATE TABLE IF NOT EXISTS `td_comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(256) NOT NULL,
+  `message` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
