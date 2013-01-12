@@ -16,13 +16,13 @@
                 })
                 .show()
                 ;
-
                 $('#tweet3d ul').roundabout({
                     minScale: 0.7
                     ,   easing: 'easeOutElastic'
                     ,   duration: 1000
                     ,   autoplay: 4000
                     ,   autoplayDuration: 4000
+                    ,   enableDrag: true 
                 });
 
                 slideshow = function () {
