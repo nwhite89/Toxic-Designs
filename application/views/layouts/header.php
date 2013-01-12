@@ -61,7 +61,6 @@
                 <div class="socialicons sixteen columns">
                     <span class="icon twi"><a href="http://bit.ly/13ei1v6"></a></span>
                     <span class="icon linki"><a href="http://linkd.in/UROMvc"></a></span>
-                    <span class="icon fb"><a href="http://on.fb.me/ZhRppb"></a></span>
                     <span class="icon github"><a href="http://bit.ly/XfgtO2"></a></span>
                     <span class="icon instagram"><a href="http://bit.ly/UwqrZd"></a></span>
                 </div>
