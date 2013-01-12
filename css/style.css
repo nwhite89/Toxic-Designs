@@ -626,6 +626,8 @@ p.pagination {
 	#tweetmobi {
 		display: none;
 	}
+}
+@media only screen and (min-width: 959px) {
 	.instagram-photos .photo {
 		filter: blur(0px) saturate(0%);
 		-webkit-filter: blur(0px) saturate(0%);
