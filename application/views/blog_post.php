@@ -7,23 +7,34 @@
 			echo $value;
 		}
 	}
-	echo '<pre>';
-	print_r($comments);
-	echo '</pre>';
 
-
-
-	foreach ($comments as $key => $value) {
-		echo 'Name:' . $value->name;
-	}
 	?>
 </div>
-
 <div id="comments" class="sixteen columns">
-	<div class="comment" style="background-image: url(http://www.gravatar.com/avatar/efdf9fc9b744e265d732dd0998953b6a.png)">
-		<p class="name">
-			Nick White
-		</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sit eum officia cumque dicta nam ad suscipit dignissimos quibusdam libero expedita aliquid facilis deleniti sunt esse nemo impedit debitis accusantium.</p>
+	<div id="commentbutton">
+		Comment
 	</div>
+	<div id="form">
+		<form action="" method="post" id="blogComments">
+			<input type="hidden" name="post_id" id="post_id" value="<?php echo $postid; ?>" />
+			<input type="hidden" name="type" id="type" value="1" />
+			<input type="text" placeholder="Name" name="name" id="name" />
+			<input type="email" placeholder="Email" name="email" id="email" />
+			<input type="text" placeholder="Message" name="message" id="message" />
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+	<?php
+	foreach ($comments as $key => $value) {
+			echo '<div class="comment" style="background-image: url(http://www.gravatar.com/avatar/efdf9fc9b744e265d732dd0998953b6a.png)">';
+				echo '<p class="name">';
+					echo $value->name;
+				echo '</p>';
+				echo '<p>';
+					echo $value->message;
+				echo '</p>';
+			echo '</div>';
+	}
+	?>
+
 </div>

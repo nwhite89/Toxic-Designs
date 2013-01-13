@@ -798,6 +798,9 @@ p.pagination {
 		width: 80%;
 	}
 }
+#comments {
+	margin-top: 20px;
+}
 #comments .comment {
 	background: no-repeat;
 	min-height: 80px;
@@ -807,4 +810,10 @@ p.pagination {
 	font-size: 0.8em;
 	font-weight: 600;
 	margin: 0;
+}
+#comments input {
+	width: 100%;
+}
+#comments #form {
+	display: none;
 }
