@@ -23,6 +23,13 @@ class Blog_model extends CI_Model
 	public function record_count() {
         return $this->db->count_all("td_blog_posts");
     }
-
+    public function fetchComments($bid = null)
+	{
+		$this->load->model('blog_model');
+		$this->db->where('post_id', $bid);
+		$this->db->where('type', 1);
+		$query = $this->db->get('td_comments');
+		return $query->result();
+	}
 }
 ?>

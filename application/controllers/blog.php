@@ -54,7 +54,8 @@ class Blog extends CI_Controller
 			'title' => 'Blog',
 		);
 		$data = array(
-			'post' => $this->blog_model->fetchBlogPost($bid), 
+			'post' => $this->blog_model->fetchBlogPost($bid),
+			'comments' => $this->blog_model->fetchComments($bid),
 		);
 		$this->load->view('layouts/header', $header);
 		$this->load->view('blog_post', $data);

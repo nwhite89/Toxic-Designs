@@ -798,3 +798,13 @@ p.pagination {
 		width: 80%;
 	}
 }
+#comments .comment {
+	background: no-repeat;
+	min-height: 80px;
+	padding-left: 90px;
+}
+#comments .name {
+	font-size: 0.8em;
+	font-weight: 600;
+	margin: 0;
+}
