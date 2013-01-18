@@ -15,12 +15,12 @@
 		Comment
 	</div>
 	<div id="form">
-		<form action="" method="post" id="blogComments">
-			<input type="hidden" name="post_id" id="post_id" value="<?php echo $postid; ?>" />
-			<input type="hidden" name="type" id="type" value="1" />
+		<form action="<?php echo base_url(); ?>blog/posts/8" method="post" id="blogComments">
+			<input required="required" type="hidden" name="post_id" id="post_id" value="<?php echo $postid; ?>" />
+			<input required="required" type="hidden" name="type" id="type" value="1" />
 			<input type="text" placeholder="Name" name="name" id="name" />
-			<input type="email" placeholder="Email" name="email" id="email" />
-			<input type="text" placeholder="Message" name="message" id="message" />
+			<input required="required" type="email" placeholder="Email" name="email" id="email" />
+			<input required="required" type="text" placeholder="Message" name="message" id="message" />
 			<button type="submit">Submit</button>
 		</form>
 	</div>

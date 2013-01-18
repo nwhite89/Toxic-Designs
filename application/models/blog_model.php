@@ -25,11 +25,20 @@ class Blog_model extends CI_Model
     }
     public function fetchComments($bid = null)
 	{
-		$this->load->model('blog_model');
+		$this->db->order_by('id', 'DESC');
 		$this->db->where('post_id', $bid);
 		$this->db->where('type', 1);
 		$query = $this->db->get('td_comments');
 		return $query->result();
+	}
+	public function addComments($comment = null) {
+		$x = 0;
+		foreach ($comment as $key => $value) {
+			if (($value == '') || ($value == null)) {
+				$x = 1;
+			}
+		}
+		if ($x == 0) { $this->db->insert('td_comments', $this->input->post()); }
 	}
 }
 ?>

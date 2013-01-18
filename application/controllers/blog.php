@@ -48,6 +48,7 @@ class Blog extends CI_Controller
 			redirect('home');
 		}
 		$this->load->model('blog_model');
+		if (isset($_POST['post_id'])) { $this->blog_model->addComments($_POST); }
 		$header = array(
 			'page' => 'blog',
 			'class' => 'blog',

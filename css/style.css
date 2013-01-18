@@ -800,6 +800,15 @@ p.pagination {
 }
 #comments {
 	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#commentbutton {
+	text-align: right;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+#commentbutton:hover {
+	text-decoration: underline;
 }
 #comments .comment {
 	background: no-repeat;
@@ -811,9 +820,30 @@ p.pagination {
 	font-weight: 600;
 	margin: 0;
 }
-#comments input {
-	width: 100%;
-}
 #comments #form {
 	display: none;
+}
+#blogComments {
+	text-align: right;
+}
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  padding: 4px 0 4px 1%;
+  margin-right: 0;
+  width: 99%;
 }
