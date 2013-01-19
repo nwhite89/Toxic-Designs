@@ -779,6 +779,9 @@ p.pagination {
 	.backTop {
 		margin-left: 0!important;
 	}
+	#commentbutton span {
+		text-align: right;
+	}
 }
 @media only screen and (max-width: 479px) {
 	.header h4 {
@@ -797,15 +800,18 @@ p.pagination {
 	.blog-posts .text {
 		width: 80%;
 	}
+	#commentbutton span {
+		text-align: right;
+	}
 }
 #comments {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 #commentbutton {
-	text-align: right;
 	margin-bottom: 10px;
 	cursor: pointer;
+	text-align: center;
 }
 #commentbutton:hover {
 	text-decoration: underline;
@@ -822,6 +828,15 @@ p.pagination {
 }
 #comments #form {
 	display: none;
+}
+.comment-note {
+	margin-top: 15px;
+}
+.comment-note .success {
+	color: green;
+}
+.comment-note .error {
+	color: red;
 }
 #blogComments {
 	text-align: right;

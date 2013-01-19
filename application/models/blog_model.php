@@ -38,7 +38,12 @@ class Blog_model extends CI_Model
 				$x = 1;
 			}
 		}
-		if ($x == 0) { $this->db->insert('td_comments', $this->input->post()); }
+		if ($x == 0) { 
+			$this->db->insert('td_comments', $this->input->post()); 
+			return 'true';
+		} else {
+			return 'false';
+		}
 	}
 }
 ?>

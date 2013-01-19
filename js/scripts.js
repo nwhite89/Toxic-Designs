@@ -135,6 +135,6 @@
                         });
                     });
                     $('#commentbutton').click(function () {
-                        $(this).next('#form').slideToggle();
+                        $(this).next().next('#form').slideToggle();
                     });
                 });

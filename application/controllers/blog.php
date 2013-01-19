@@ -48,7 +48,8 @@ class Blog extends CI_Controller
 			redirect('home');
 		}
 		$this->load->model('blog_model');
-		if (isset($_POST['post_id'])) { $this->blog_model->addComments($_POST); }
+		if (isset($_POST['post_id'])) { $comment = $this->blog_model->addComments($_POST); }
+		else { $comment = 'null'; }
 		$header = array(
 			'page' => 'blog',
 			'class' => 'blog',
@@ -58,6 +59,7 @@ class Blog extends CI_Controller
 			'post' => $this->blog_model->fetchBlogPost($bid),
 			'comments' => $this->blog_model->fetchComments($bid),
 			'postid' => $bid,
+			'posted' => $comment,
 		);
 		$this->load->view('layouts/header', $header);
 		$this->load->view('blog_post', $data);

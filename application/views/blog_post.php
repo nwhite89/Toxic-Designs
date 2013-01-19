@@ -7,13 +7,24 @@
 			echo $value;
 		}
 	}
-
+  	if ($posted == 'true') {
+		echo "<div class='comment-note'>";
+			echo "<p class='success'>Thank you for your comment.</p>";
+		echo "</div>";
+	} else if ($posted == 'false') {
+		echo "<div class='comment-note'>";
+			echo "<p class='error'>Apologies but there seemed to have been an error with your post please ensure that all fields are completed.</p>";
+		echo "</div>";
+	}
 	?>
 </div>
 <div id="comments" class="sixteen columns">
-	<div id="commentbutton">
-		Comment
+	<div id="commentbutton" class="four columns alpha omega offset-by-twelve">
+		<span class="label">
+			Comment
+		</span>
 	</div>
+    <br class="clear" />
 	<div id="form">
 		<form action="<?php echo base_url(); ?>blog/posts/8" method="post" id="blogComments">
 			<input required="required" type="hidden" name="post_id" id="post_id" value="<?php echo $postid; ?>" />
