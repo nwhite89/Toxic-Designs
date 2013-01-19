@@ -16,7 +16,7 @@
 			echo "<p class='error'>Apologies but there seemed to have been an error with your post please ensure that all fields are completed.</p>";
 		echo "</div>";
 	}
-	?>
+?>
 </div>
 <div id="comments" class="sixteen columns">
 	<div id="commentbutton" class="four columns alpha omega offset-by-twelve">
@@ -26,7 +26,7 @@
 	</div>
     <br class="clear" />
 	<div id="form">
-		<form action="<?php echo base_url(); ?>blog/posts/8" method="post" id="blogComments">
+		<form action="<?php echo base_url().'blog/posts/'.$postid;?>" method="post" id="blogComments">
 			<input required="required" type="hidden" name="post_id" id="post_id" value="<?php echo $postid; ?>" />
 			<input required="required" type="hidden" name="type" id="type" value="1" />
 			<input type="text" placeholder="Name" name="name" id="name" />
@@ -36,8 +36,11 @@
 		</form>
 	</div>
 	<?php
-	foreach ($comments as $key => $value) {
-			echo '<div class="comment" style="background-image: url(http://www.gravatar.com/avatar/efdf9fc9b744e265d732dd0998953b6a.png)">';
+		$size = 80;
+		$default = '';
+		foreach ($comments as $key => $value) {	
+			$grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $value->email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
+			echo '<div class="comment" style="background-image: url('.$grav_url.')">';
 				echo '<p class="name">';
 					echo $value->name;
 				echo '</p>';
@@ -45,7 +48,7 @@
 					echo $value->message;
 				echo '</p>';
 			echo '</div>';
-	}
+		}
 	?>
 
 </div>
