@@ -862,3 +862,7 @@ input[type="color"],
   margin-right: 0;
   width: 99%;
 }
+pre.codeview {
+	padding: 0;
+	background-color: #fff;
+}

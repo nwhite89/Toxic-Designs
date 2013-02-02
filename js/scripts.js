@@ -102,6 +102,18 @@ jQuery(function($){
             url: base_url + 'labs/viewProject/' + pid
         }).done(function (data){
             $('#project-view').html(data);
+        }, function (){ 
+            var nodes = document.getElementsByTagName('pre');
+            var options = cvos = [];
+
+            for(var i = 0; i < nodes.length; i++) {
+                if(nodes[i].className.match(/^codeview(\s+(.+))?/i)) {
+                    options = RegExp.$2.split(/\s+/);
+                    cvos.push(new CodeView(nodes[i], options, 'codeView_' + (i + 1)));
+                }
+            }
+            for(i in cvos) cvos[i].create();
+
         });
         $('#project-view').show();
         $('div.backTop').show();
