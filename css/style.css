@@ -274,7 +274,8 @@ a.label:hover {
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 }
-.box p {
+.box p,
+.box ul {
 	padding: 5px 2%;
 }
 .upset {
@@ -395,12 +396,15 @@ a.social:hover {
 	-webkit-transition: opacity 1s;
 	-o-transition: opacity 1s;
 }
-.project:hover p {
+.development .project:hover p {
 	visibility: hidden;
 	transition: visibility 0.2s;
 	-moz-transition: visibility 0.2s;
 	-webkit-transition: visibility 0.2s;
 	-o-transition: visibility 0.2s;
+}
+.labs .project:hover p {
+	color: #000;
 }
 .backTop {
 	position: fixed;
