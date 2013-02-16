@@ -3,7 +3,6 @@
 foreach ($project->result() as $row) {
 	echo "<div class=\"sixteen columns\">";
 		echo "<span class=\"label full-width\">" . $row->title . "</span>";
-		echo "<img src=\"" . base_url() . $row->image . "\" />";
 	echo "</div>";
 	echo "<div class=\"eight columns upset\">";
 		echo "<a href=\"". $row->url ."\" class=\"label full-width\" target=\"_blank\">".$row->url_title."</a>";

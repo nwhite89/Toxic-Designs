@@ -5,7 +5,6 @@
 			echo "<div class=\"five columns\">";
 				echo "<div class=\"project\" rel=" . $lab->id . ">";
 					echo "<p>" . $lab->title . "</p>";
-					echo "<div style=\"background-image: url(" . base_url() . $lab->thumbnail . ")\">&nbsp;</div>";
 				echo "</div>";
 			echo "</div>";
 		}
