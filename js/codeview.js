@@ -79,19 +79,19 @@ function CodeView(node, options, id) {
 
 		if(this.viewLineNumbers) {
 			this.numbersCont = document.createElement('div');
-			this.numbersCont.style.width = '40px';
+			this.numbersCont.style.width = '10%';
 			this.numbersCont.style.height = '100%';
 			this.numbersCont.style.styleFloat = 'left';
 			this.numbersCont.style.cssFloat = 'left';
 			this.numbersCont.style.overflow = 'hidden';
 			this.numbersCont.style.borderRight = '1px solid #808080';
-			this.numbersCont.style.backgroundColor = '#F0F0F0';
+			this.numbersCont.style.backgroundColor = '#00AEC8';
 			this.node.appendChild(this.numbersCont);
 
 			this.numbers = document.createElement('div');
 			this.numbers.style.textAlign = 'right';
 			this.numbers.style.padding = '4px';
-			this.numbers.style.color = '#808080';
+			this.numbers.style.color = '#fff';
 			this.numbers.style.fontFamily = 'Monospace';
 			this.numbers.style.fontSize = '13px';
 			this.numbersCont.appendChild(this.numbers);
@@ -119,7 +119,7 @@ function CodeView(node, options, id) {
 
 		iframe = document.createElement('iframe');
 		iframe.frameBorder = 0;
-		iframe.style.width = '80%';
+		iframe.style.width = '89%';
 		iframe.style.height = '100%';
 		iframe.style.backgroundColor = this.bgColor;
 		this.node.appendChild(iframe);
@@ -170,7 +170,7 @@ function CodeView(node, options, id) {
 			if(!isNaN(val)) offHeight += val;
 		}
 		if(this.node.style.height == '') this.node.style.height = this.node.offsetHeight + 'px';
-		if(this.node.style.width == '') this.node.style.width = this.node.offsetWidth + 'px';
+		if(this.node.style.width == '') this.node.style.width = '100%;'; //this.node.offsetWidth + 'px';
 		this.textWidth = this.node.offsetWidth - offWidth;
 		this.textHeight = this.node.offsetHeight - offHeight;
 		this.node.innerHTML = '';
