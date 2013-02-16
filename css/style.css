@@ -1,3 +1,4 @@
+
 h1, h2, h3, h4, h5, h6 {
 	text-transform: capitalize;
 }
@@ -869,4 +870,13 @@ input[type="color"],
 pre.codeview {
 	padding: 0;
 	background-color: #fff;
+}
+.code_container pre {
+	white-space: pre!important;
+}
+div.luminous, .luminous .line, .luminous pre {
+	font-size: 13px!important;
+}
+.luminous .code_container {
+	max-height: 250px!important;
 }
