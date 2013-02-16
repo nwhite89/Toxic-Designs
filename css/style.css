@@ -875,7 +875,7 @@ pre.codeview {
 	white-space: pre!important;
 }
 div.luminous, .luminous .line, .luminous pre {
-	font-size: 13px!important;
+	font-size: 12px!important;
 }
 .luminous .code_container {
 	max-height: 250px!important;
