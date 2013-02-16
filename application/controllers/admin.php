@@ -126,7 +126,23 @@ class Admin extends CI_Controller
 		}
 	}
 
+	public function newLabPost()
+	{
+		$header = array(
+			'page' => 'admin',
+			'class' => 'labs',
+			'title' => 'Admin',
+		);
+		$this->load->view('layouts/header', $header);
+		$this->load->view('admin/labNewForm');
+		$this->load->view('layouts/footer');
+	}
 
+	public function blogLabSubmit()
+	{
+		$this->db->insert('td_labs', $this->input->post());
+		redirect('/labs');
+	}
 
 	private function adminCheck()
 	{

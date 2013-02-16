@@ -14,7 +14,7 @@ if(!isset($post)) {
 	foreach ($post->result() as $i => $x)
 	{
 		echo '<div class="sixteen columns">';
-			echo '<form id="devProject" method="post" action="'.base_url().'admin/blogPostSubmit">';
+			echo '<form id="devProject" method="post" action="'.base_url().'admin/blogLabSubmit">';
 				foreach ($x as $f => $y)
 				{
 					if ($f == 'id') { echo "<input class='full-width' type='hidden' name='" . $f . "' id='". $f ."' placeholder='".$f."' value='".$y."'/>"; }
