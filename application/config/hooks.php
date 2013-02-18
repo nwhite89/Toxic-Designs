@@ -8,7 +8,6 @@
 |
 |	http://codeigniter.com/user_guide/general/hooks.html
 |
-
 // compress output
 $hook['display_override'][] = array(
 	'class' => '',
@@ -17,6 +16,7 @@ $hook['display_override'][] = array(
 	'filepath' => 'hooks'
 );
 */
+
 $hook['display_override'][] = array(
 	'class' => 'highlight',
 	'function' => 'hook',
