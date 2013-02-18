@@ -568,6 +568,9 @@ p.pagination {
 	.socialicons .icon.instagram {
 		background: url(../img/icons/instagram.png) no-repeat;
 	}
+	.socialicons .icon.email {
+		background: url(../img/icons/email.png) no-repeat;
+	}
 	.socialicons .icon > a {
 		display: block;
 		width:100%;

@@ -59,6 +59,7 @@
         <div id="header-bar">
             <div class="container clearfix">
                 <div class="socialicons sixteen columns">
+                    <span class="icon email"><a href="mailto:nickwhite@toxicd.co.uk"></a></span>
                     <span class="icon twi"><a href="http://bit.ly/13ei1v6"></a></span>
                     <span class="icon linki"><a href="http://linkd.in/UROMvc"></a></span>
                     <span class="icon github"><a href="http://bit.ly/XfgtO2"></a></span>
