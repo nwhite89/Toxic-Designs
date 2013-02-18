@@ -10,6 +10,7 @@ class Labs_model extends CI_Model
 
 	public function labs()
 	{
+		$this->db->order_by('date', 'DESC');
 		$query = $this->db->get('td_lab');
 		return $query->result();
 	}

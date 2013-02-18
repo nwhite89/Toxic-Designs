@@ -138,9 +138,9 @@ class Admin extends CI_Controller
 		$this->load->view('layouts/footer');
 	}
 
-	public function blogLabSubmit()
+	public function labSubmit()
 	{
-		$this->db->insert('td_labs', $this->input->post());
+		$this->db->insert('td_lab', $this->input->post());
 		redirect('/labs');
 	}
 
