@@ -39,9 +39,9 @@
                             <li class="home">
                                 <a class="home" href="<?php echo base_url(); ?>" title="Home">home</a>
                             </li>
-                            <!--li class="labs">
+                            <li class="labs">
                                 <a class="labs" href="<?php echo base_url(); ?>labs" title="Labs">labs</a>
-                            </li-->
+                            </li>
                             <li class="development">
                                 <a class="development" href="<?php echo base_url(); ?>development" title="Development">development</a>
                             </li>
@@ -76,9 +76,9 @@
                     <li>
                         <a class="home" href="<?php echo base_url(); ?>" title="Home">home</a>
                     </li>
-                    <!--li>
+                    <li>
                         <a class="labs" href="<?php echo base_url(); ?>labs" title="Labs">labs</a>
-                    </li-->
+                    </li>
                     <li>
                         <a class="development" href="<?php echo base_url(); ?>development" title="Development">development</a>
                     </li>
