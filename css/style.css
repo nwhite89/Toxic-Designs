@@ -343,10 +343,11 @@ a.social:hover {
 }
 #project-view {
 	margin-top: 800px;
-	height: auto;
 	width: 100%;
 	display: none;
 	text-align: center;
+	height: auto;
+	min-height: 200px;
 }
 #project-view img {
 	height: auto;
