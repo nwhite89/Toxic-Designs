@@ -7,6 +7,8 @@ class Admin extends CI_Controller
         $this->init();
     }
 
+    public function ini() {}
+
 	public function index()
 	{
 		$header = array(
