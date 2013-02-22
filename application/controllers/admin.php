@@ -7,14 +7,6 @@ class Admin extends CI_Controller
         $this->init();
     }
 
-    public function init()
-    {
-    	if($this->adminCheck()) {
-    	} else {
-    		$this->index();
-    	}
-    }
-
 	public function index()
 	{
 		$header = array(
@@ -94,35 +86,43 @@ class Admin extends CI_Controller
 
 	public function newBlogPost()
 	{
-		$header = array(
-			'page' => 'admin',
-			'class' => 'blog',
-			'title' => 'Admin',
-		);
-		$this->load->view('layouts/header', $header);
-		$this->load->view('admin/blogNewForm');
-		$this->load->view('layouts/footer');
+		if($this->adminCheck()) {
+			$header = array(
+				'page' => 'admin',
+				'class' => 'blog',
+				'title' => 'Admin',
+			);
+			$this->load->view('layouts/header', $header);
+			$this->load->view('admin/blogNewForm');
+			$this->load->view('layouts/footer');
+		} else {
+			$this->index();
+		}
 	}
 
 	public function updateBlogPost($bid = null)
 	{
-		if ($bid == null) {
-			$this->newBlogPost();
+		if($this->adminCheck()) {
+			if ($bid == null) {
+				$this->newBlogPost();
+			} else {
+				$header = array(
+					'page' => 'admin',
+					'class' => 'blog',
+					'title' => 'Update Blog post',
+				);
+				$array = array('id'=>$bid);
+				$this->db->where($array);
+				$query = $this->db->get('td_blog_posts');
+				$data = array( 
+					'post' => $query,
+				);
+				$this->load->view('layouts/header', $header);
+				$this->load->view('admin/blogNewForm', $data);
+				$this->load->view('layouts/footer');
+			}
 		} else {
-			$header = array(
-				'page' => 'admin',
-				'class' => 'blog',
-				'title' => 'Update Blog post',
-			);
-			$array = array('id'=>$bid);
-			$this->db->where($array);
-			$query = $this->db->get('td_blog_posts');
-			$data = array( 
-				'post' => $query,
-			);
-			$this->load->view('layouts/header', $header);
-			$this->load->view('admin/blogNewForm', $data);
-			$this->load->view('layouts/footer');
+			$this->index();
 		}
 	}
 
@@ -141,14 +141,18 @@ class Admin extends CI_Controller
 
 	public function newLabPost()
 	{
-		$header = array(
-			'page' => 'admin',
-			'class' => 'labs',
-			'title' => 'Admin',
-		);
-		$this->load->view('layouts/header', $header);
-		$this->load->view('admin/labNewForm');
-		$this->load->view('layouts/footer');
+		if($this->adminCheck()) {
+			$header = array(
+				'page' => 'admin',
+				'class' => 'labs',
+				'title' => 'Admin',
+			);
+			$this->load->view('layouts/header', $header);
+			$this->load->view('admin/labNewForm');
+			$this->load->view('layouts/footer');
+		} else {
+			$this->index();
+		}
 	}
 
 	public function labSubmit()
