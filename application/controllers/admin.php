@@ -4,7 +4,6 @@ class Admin extends CI_Controller c
 {
 	public function __construct() {
         parent::__construct();
-        $this->init();
     }
 
     public function init()
