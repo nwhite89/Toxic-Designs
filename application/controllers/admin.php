@@ -9,7 +9,7 @@ class Admin extends CI_Controller
 
     public function init()
     {
-    	print_r('something');
+    	Admin::checkAdmin();
     }
 
 	public function index()
