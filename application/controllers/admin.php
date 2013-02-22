@@ -9,7 +9,10 @@ class Admin extends CI_Controller
 
     public function init()
     {
-    	Admin::checkAdmin();
+    	if($this->adminCheck()) {
+    	} else {
+    		$this->index();
+    	}
     }
 
 	public function index()
