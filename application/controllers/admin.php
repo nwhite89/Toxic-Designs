@@ -7,7 +7,7 @@ class Admin extends CI_Controller
         $this->init();
     }
 
-    public function ini() {}
+    public function init() {}
 
 	public function index()
 	{
