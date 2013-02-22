@@ -9,7 +9,6 @@ class Admin extends CI_Controller c
 
     public function init()
     {
-    	print_r('something');
     }
 
 	public function index()
