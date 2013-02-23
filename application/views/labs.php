@@ -1,4 +1,5 @@
 <div class="sixteen columns" id="labs">
+	<p class="pagination"><?php echo $links; ?></p>
 	<?php
 		foreach ($labs as $lab)
 		{

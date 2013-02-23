@@ -14,7 +14,13 @@ class Labs_model extends CI_Model
 		$query = $this->db->get('td_lab');
 		return $query->result();
 	}
-	
+	public function getLabs($limit, $start)
+	{
+		$this->db->order_by('date', 'DESC');
+		$this->db->limit($limit, $start);
+		$query = $this->db->get('td_lab');
+		return $query->result();	
+	}
 	public function viewProject($pid = null)
 	{
 		$this->db->where('id', $pid);
@@ -22,6 +28,10 @@ class Labs_model extends CI_Model
 
 		return $query;
 	}
+
+	public function record_count() {
+        return $this->db->count_all("td_lab");
+    }
 }
 
 ?>
