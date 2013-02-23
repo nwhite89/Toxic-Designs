@@ -282,6 +282,7 @@ a.label:hover {
 }
 .box table {
 	margin: auto;
+	width: 80%;
 }
 .upset {
 	margin-top: 10px;
