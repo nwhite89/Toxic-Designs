@@ -10,7 +10,7 @@ class Home extends CI_Controller {
 		$header = array(
 			'page' => 'home',
 			'class' => 'home',
-			'title' => 'home',
+			'title' => 'Home',
 		);
 		$data = array (
 			'page'=>'home',
