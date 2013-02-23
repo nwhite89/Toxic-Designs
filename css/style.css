@@ -276,6 +276,7 @@ a.label:hover {
 	border-radius: 4px;
 }
 .box p,
+.box h4,
 .box ul {
 	padding: 5px 2%;
 }
