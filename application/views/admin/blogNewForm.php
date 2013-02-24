@@ -6,6 +6,12 @@ if(!isset($post)) {
 			<label for=""><input class="full-width" type="text" name="blog_title" placeholder="Blog post title"></label>
 			<label for=""><textarea class="full-width" name="blog_post" cols="30" rows="10" placeholder="Blog Content"></textarea></label>
 			<label for=""><input class="full-width" type="text" name="blog_date" placeholder="Blog Date"></label>
+			<label for"">
+				<select name="published">
+					<option value="1">Not Published</option>
+					<option value="0">Published</option>
+				</select>
+			</label>
 			<button type="submit">Submit</button>
 		</form>
 	</div>
@@ -14,7 +20,7 @@ if(!isset($post)) {
 	foreach ($post->result() as $i => $x)
 	{
 		echo '<div class="sixteen columns">';
-			echo '<form id="devProject" method="post" action="'.base_url().'admin/blogLabSubmit">';
+			echo '<form id="devProject" method="post" action="'.base_url().'admin/blogPostSubmit">';
 				foreach ($x as $f => $y)
 				{
 					if ($f == 'id') { echo "<input class='full-width' type='hidden' name='" . $f . "' id='". $f ."' placeholder='".$f."' value='".$y."'/>"; }

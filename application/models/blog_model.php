@@ -16,10 +16,9 @@ class Blog_model extends CI_Model
 	public function getBlogPosts($limit, $start)
 	{
 		$this->load->helper('date');
+		$this->db->where('published !=', '1');
 		$this->db->order_by('blog_date', 'DESC');
 		$this->db->limit($limit, $start);
-		#$currentDT = mdate('%Y-%m-%d %H:%i:%s');
-		#$this->db->where('blog_date ', $currentDT);
 		$query = $this->db->get('td_blog_posts');
 		return $query->result();	
 	}
