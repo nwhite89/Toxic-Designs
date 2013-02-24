@@ -15,6 +15,7 @@ class Development_model extends CI_Model
 	public function getProjects($limit, $start)
 	{
 		$this->db->order_by('date', 'DESC');
+		$this->db->where('published !=', '1');
 		$this->db->limit($limit, $start);
 		$query = $this->db->get('td_development');
 		return $query->result();	
