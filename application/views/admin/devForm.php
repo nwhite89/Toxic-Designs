@@ -8,6 +8,18 @@ if(isset($project))
 				foreach ($x as $f => $y)
 				{
 					if ($f == 'id') { echo "<input class='full-width' type='hidden' name='" . $f . "' id='". $f ."' placeholder='".$f."' value='".$y."'/>"; }
+					else if ($f == 'published') {
+						echo '<label for"">
+							<select name="published">
+								<option value="1"';
+								if ($y == 1) { echo ' selected'; }
+								echo '>Not Published</option>
+								<option value="0"';
+								if ($y == 0) { echo ' selected'; }
+								echo '>Published</option>
+							</select>
+						</label>';
+					}
 					else {
 						echo "<label for='". $f ."'>";
 							if ($f !='text') { echo "<input class='full-width' type='text' name='" . $f . "' id='". $f ."' placeholder='".$f."' value='".$y."'/>"; }
@@ -31,6 +43,12 @@ else
 			<label for="date"><input type="text" class="full-width" name="date" id="date" placeholder="Date of Project"></label>
 			<label for="text"><textarea type="text" class="full-width" name="text" id="text" placeholder="Text of project"></textarea></label>
 			<label for="url"><input type="text" class="full-width" name="url" id="url" placeholder="URL of site"></label>
+			<label for"">
+				<select name="published">
+					<option value="1">Not Published</option>
+					<option value="0">Published</option>
+				</select>
+			</label>
 			<button type="submit">Submit</button>
 		</form>
 	</div>
