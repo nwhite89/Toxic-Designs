@@ -9,6 +9,7 @@ class Development_model extends CI_Model
 	public function projects()
 	{
 		$this->db->order_by('date', 'DESC');
+		$this->db->where('published !=', '1');
 		$query = $this->db->get('td_development');
 		return $query->result();
 	}
