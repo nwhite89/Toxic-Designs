@@ -822,6 +822,12 @@ p.pagination {
 	#commentbutton span {
 		text-align: right;
 	}
+	.codeSkills {
+	list-style: none;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+}
 }
 #comments {
 	margin-top: 20px;
