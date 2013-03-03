@@ -328,10 +328,15 @@ a.social:hover {
 }
 .codeSkills {
 	list-style: none;
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
 }
 .codeSkills li {
+	/*
 	display: inline-block;
 	width: 105px;
+	*/
 	margin-bottom: 20px;
 	font-size: 0.9em;
 }
