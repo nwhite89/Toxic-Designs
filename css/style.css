@@ -254,6 +254,9 @@ a:hover { text-decoration: underline!important; }
 	letter-spacing: .16em;
 	line-height: 12px;
 }
+.label.about {
+	width: 90%;
+}
 a.label {
 	text-decoration: none;
 	color: #fff;
