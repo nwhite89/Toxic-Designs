@@ -30,7 +30,7 @@ class Labs_model extends CI_Model
 	}
 
 	public function record_count() {
-		// $this->db->where('published !=', '1');
+		$this->db->where('published !=', '1');
         return $this->db->count_all_results("td_lab");
     }
 }

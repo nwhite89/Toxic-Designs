@@ -5,6 +5,12 @@
 		<label for=""><textarea class="full-width" name="text" cols="30" rows="10" placeholder="Lab Content"></textarea></label>
 		<label for=""><input class="full-width" type="text" name="url" placeholder="Lab URL"></label>
 		<label for=""><input class="full-width" type="text" name="url_title" placeholder="Lab URL Title"></label>
+		<label for"">
+			<select name="published">
+				<option value="1">Not Published</option>
+				<option value="0">Published</option>
+			</select>
+		</label>
 		<button type="submit">Submit</button>
 	</form>
 </div>
