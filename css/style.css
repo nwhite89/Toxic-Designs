@@ -534,6 +534,7 @@ h3.about-me {
 	display: none;
 	opacity: 0;
 	margin-bottom: 20px;
+	padding-top: 10px;
 }
 
 #home-projects .projects.active {

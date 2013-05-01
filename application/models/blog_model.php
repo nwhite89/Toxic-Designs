@@ -9,7 +9,7 @@ class Blog_model extends CI_Model
 	{
 		$this->db->order_by('blog_date', 'DESC');
 		$this->db->where('published !=', '1');
-		if ($bid == 'home') { $this->db->limit(3);}
+		if ($bid == 'home') { $this->db->limit(4);}
 		else { $this->db->where('id', $bid); }
 		$query = $this->db->get('td_blog_posts');
 		return $query->result();
