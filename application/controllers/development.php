@@ -22,12 +22,12 @@ class Development extends CI_Controller
 		);
 		// Create pagination of blog posts
 		$config = array();
-		$config['base_url'] = base_url() . 'development/page/';
+		$config['base_url'] = '/development/page/';
 		$config['total_rows'] = $this->development_model->record_count();
 		$config['per_page'] = 6;
 		$config['uri_segment'] = 3;
 		$choice = $config["total_rows"] / $config["per_page"];
-		$config['num_links'] = round($choice);
+		$config['num_links'] = 5;
 		$this->pagination->initialize($config);
 		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 

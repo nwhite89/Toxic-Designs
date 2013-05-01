@@ -29,7 +29,8 @@ class Development_model extends CI_Model
 		return $query;
 	}
 	public function record_count() {
-        return $this->db->count_all("td_development");
+		$this->db->where('published !=', '1');
+        return $this->db->count_all_results("td_development");
     }
 }
 ?>

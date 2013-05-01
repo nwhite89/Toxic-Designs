@@ -24,7 +24,8 @@ class Blog_model extends CI_Model
 		return $query->result();	
 	}
 	public function record_count() {
-        return $this->db->count_all("td_blog_posts");
+        $this->db->where('published !=', '1');
+        return $this->db->count_all_results("td_blog_posts");
     }
     public function fetchComments($bid = null)
 	{
