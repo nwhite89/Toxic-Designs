@@ -790,6 +790,11 @@ p.pagination {
 		font-size: 0.9em;
 	}
 }
+@media only screen and (min-width: 768px) {
+	.label.about {
+		width: 94%;
+	}
+}
 @media only screen and (max-width: 767px) {
 	.label.about {
 		padding: 10px 7% 10px 3%;
