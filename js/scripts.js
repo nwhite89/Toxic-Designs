@@ -77,7 +77,7 @@ jQuery(function($){
     $('#projects div.project').click(function () {
         var pid = $(this).attr('rel');
         $.ajax({
-            url: base_url + 'index.php/development/viewProject/' + pid
+            url: base_url + 'development/post/' + pid
         }).done(function (data){
             $('#project-view').html(data);
         });
@@ -99,7 +99,7 @@ jQuery(function($){
     $('#labs div.project').click(function () {
         var pid = $(this).attr('rel');
         $.ajax({
-            url: base_url + 'labs/viewProject/' + pid
+            url: base_url + 'labs/post/' + pid
         }).done(function (data){
             $('#project-view').html(data);
         }, function (){ 

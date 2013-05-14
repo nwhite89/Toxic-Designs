@@ -38,9 +38,20 @@
 |
 */
 
-$route['default_controller'] = "home";
+$route['default_controller'] = "Welcome";
 $route['404_override'] = '';
 
+$route['about-me'] = 'welcome/about';
+
+$route['labs'] = 'welcome/labs';
+$route['labs/post/(:any)'] = 'welcome/viewLab/$1';
+
+$route['development'] = 'welcome/development';
+$route['development/post/(:any)'] = 'welcome/viewDev/$1';
+
+$route['blog/page'] = 'blog/page';
+$route['blog/page/(:any)'] = 'blog/page/$1';
+$route['blog/(:any)'] = 'blog/post/$1';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
