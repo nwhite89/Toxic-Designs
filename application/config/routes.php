@@ -44,6 +44,8 @@ $route['404_override'] = '';
 $route['about-me'] = 'welcome/about';
 
 $route['labs'] = 'welcome/labs';
+$route['labs/page'] = 'welcome/labs';
+$route['labs/page/(:any'] = 'welcome/labs/page/$1';
 $route['labs/post/(:any)'] = 'welcome/viewLab/$1';
 
 $route['development'] = 'welcome/development';
