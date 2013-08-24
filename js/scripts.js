@@ -4,70 +4,83 @@ $('#tweet3d li')
         var degrees = $(this).data('roundabout').degrees,
             roundaboutBearing = $(this).parent().data('roundabout').bearing,
             rotateY = Math.round(roundaboutBearing - degrees);
-        if($.browser.safari != true)
-        {
+        if($.browser.safari !== true) {
             $(this).css({
-                "-webkit-transform": "perspective(2000) rotateY(" + rotateY + "deg)",
-                "-moz-transform": "perspective(2000) rotateY(" + rotateY + "deg)",
-                "transform": "perspective(2000) rotateY(" + rotateY + "deg)"
+                "-webkit-transform": "perspective(2000) rotateY(" +
+                    rotateY + "deg)",
+                "-moz-transform": "perspective(2000) rotateY(" +
+                    rotateY + "deg)",
+                "transform": "perspective(2000) rotateY(" +
+                    rotateY + "deg)"
             });
         }
     }
 })
-.show()
-;
+.show();
+
 $('#tweet3d ul').roundabout({
-    minScale: 0.7
-    ,   easing: 'easeOutElastic'
-    ,   duration: 1000
-    ,   autoplay: 4000
-    ,   autoplayDuration: 4000
-    ,   enableDrag: true 
+    minScale: 0.7,
+    easing: 'easeOutElastic',
+    duration: 1000,
+    autoplay: 4000,
+    autoplayDuration: 4000,
+    enableDrag: true
 });
 
 slideshow = function () {
     var activeItem = $('#tweets').children('.active');
 
     if (activeItem.next().index() == -1) {
-        activeItem.animate({left: '-=350', opacity: '0' }, 490, 'swing', function () {
-            $('#tweets').children().first().animate({opacity: '1'}, 1200, 'swing', function () {
+        activeItem.animate({
+            left: '-=350',
+            opacity: '0'
+        }, 490, 'swing', function () {
+            $('#tweets').children().first().animate({
+                opacity: '1'
+            }, 1200, 'swing', function () {
                 activeItem.removeClass('active').css('left', '5%');
                 $('#tweets').children().first().addClass('active');
             });
         });
     } else {
-        activeItem.animate({left: '-=350', opacity: '0' }, 490, 'swing', function () {
-            activeItem.next().animate({opacity: '1'}, 1200, 'swing', function () {
+        activeItem.animate({
+            left: '-=350',
+            opacity: '0'
+        }, 490, 'swing', function () {
+            activeItem.next().animate({
+                opacity: '1'
+            }, 1200, 'swing', function () {
                 activeItem.css('left', '5%');
                 activeItem.removeClass('active').next().addClass('active');
             });
         });
     }
-}
+};
 
-developmentProjects = function ()
-{
+developmentProjects = function () {
     var projects = $('#home-projects'),
         activeItem = projects.find('.active');
 
-    if (activeItem.next().index() == -1) 
-    {
+    if (activeItem.next().index() == -1) {
         activeItem.animate({opacity: '0'}, 490, 'swing', function () {
             activeItem.removeClass('active');
             projects.children().first().next().addClass('active');
-            projects.children().first().next().animate({opacity: '1'}, 790, 'swing', function () {
+            projects.children().first().next().animate({
+                opacity: '1'
+            }, 790, 'swing', function () {
             });
         });
-    } else 
-    {
+    } else {
         activeItem.animate({opacity: '0'}, 490, 'swing', function () {
             activeItem.removeClass('active').next().addClass('active');
-            activeItem.next().animate({opacity: '1'}, 790, 'swing', function () {
+            activeItem.next().animate({
+                opacity: '1'
+            }, 790, 'swing', function () {
             });
         });
             
     }
-}
+};
 
 
 jQuery(function($){
@@ -83,10 +96,9 @@ jQuery(function($){
         });
         $('#project-view').show();
         $('div.backTop').show();
-        $('html, body').animate(
-            {
+        $('html, body').animate({
                 scrollTop: $("#project-view").offset().top - 10
-            }, 
+            },
             {
                 queue: false,
                 duration: 1000,
@@ -102,14 +114,18 @@ jQuery(function($){
             url: base_url + 'labs/post/' + pid
         }).done(function (data){
             $('#project-view').html(data);
-        }, function (){ 
-            var nodes = document.getElementsByTagName('pre');
-            var options = cvos = [];
+        }, function (){
+            var nodes, options, cvos;
+            nodes = document.getElementsByTagName('pre');
+            options = [];
+            cvos = [];
 
             for(var i = 0; i < nodes.length; i++) {
                 if(nodes[i].className.match(/^codeview(\s+(.+))?/i)) {
                     options = RegExp.$2.split(/\s+/);
-                    cvos.push(new CodeView(nodes[i], options, 'codeView_' + (i + 1)));
+                    cvos.push(
+                        new CodeView(nodes[i], options, 'codeView_' + (i + 1))
+                    );
                 }
             }
             for(i in cvos) cvos[i].create();
@@ -120,7 +136,7 @@ jQuery(function($){
         $('html, body').animate(
             {
                 scrollTop: $("#project-view").offset().top - 10
-            }, 
+            },
             {
                 queue: false,
                 duration: 1000,
@@ -134,16 +150,17 @@ jQuery(function($){
         $('html, body').animate(
             {
                 scrollTop: $("html").offset().top
-            }, 
+            },
             {
                 queue: false,
                 duration: 1000,
                 complete: function () {
-                    $('div.backTop').hide();;
+                    $('div.backTop').hide();
                     $('#project-view').hide();
-                    $('#project-view').html('<img src="'+base_url+'/img/ajax-loader.gif" />');
+                    $('#project-view').html('<img src="' +
+                        base_url+'/img/ajax-loader.gif" />');
                 }
-        });
+            });
     });
     $('#commentbutton').click(function () {
         $(this).next().next('#form').slideToggle();
